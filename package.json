@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "dotenv": "^15.0.0",
+    "mustache": "^4.2.0",
+    "node-fetch": "^3.2.0"
+  },
+  "name": "ezefranca",
+  "version": "1.0.0",
+  "description": "github profile",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezefranca/ezefranca.git"
+  },
+  "author": "@ezefranca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezefranca/ezefranca/issues"
+  },
+  "homepage": "https://github.com/ezefranca/ezefranca#readme"
+}
