@@ -67,7 +67,12 @@ async function setInstagramPosts() {
   const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
   await delay(5000)
   console.log('print')
-  await page.screenshot({ path: 'profile.png' });
+  await page.screenshot({ path: '_profile.png' })
+  .then(screen => {
+    fs.writeFileSync('profile.png', screen);
+    fs.writeFileSync('README.md', '<p><img width="750" src="profile.png" /></p>');
+  })
+  
   const html = await page.content();
   const $ = cheerio.load(html);
   const span = $('.social');
