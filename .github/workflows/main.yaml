@@ -10,7 +10,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: secrets
     steps:
       - name: Checkout current repository to Main branch
         uses: actions/checkout@v1
@@ -30,5 +29,5 @@ jobs:
       - name: Commit and Push new README.md to the repository
         uses: mikeal/publish-to-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.HUB_API_KEY }}
           BRANCH_NAME: 'main'
