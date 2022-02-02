@@ -30,28 +30,6 @@ jobs:
         run: echo $OPEN_WEATHER_MAP_KEY
       - name: Commit and Push new README.md to the repository
         uses: mikeal/publish-to-github-action@master
-        with:
-          OPEN_WEATHER_MAP_KEY: ${{ secrets.OPEN_WEATHER_MAP_KEY }}
-          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
-          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
-          TWITTER_USER_KEY: ${{ secrets.TWITTER_USER_KEY }}
-          HUB_API_KEY: ${{ secrets.HUB_API_KEY }}
-          OCR_API_KEY: ${{ secrets.OCR_API_KEY }}
-          COORDINATES_URL: ${{ secrets.COORDINATES_URL }}
-          COORDINATES_TOKEN: ${{ secrets.COORDINATES_TOKEN }}
-          MUSTACHE_MAIN_DIR: ${{ secrets.MUSTACHE_MAIN_DIR }}
-          GITHUB_TOKEN: ${{ secrets.HUB_API_KEY }}
         env:
-          OPEN_WEATHER_MAP_KEY: ${{ secrets.OPEN_WEATHER_MAP_KEY }}
-          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
-          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
-          TWITTER_USER_KEY: ${{ secrets.TWITTER_USER_KEY }}
-          HUB_API_KEY: ${{ secrets.HUB_API_KEY }}
-          OCR_API_KEY: ${{ secrets.OCR_API_KEY }}
-          COORDINATES_URL: ${{ secrets.COORDINATES_URL }}
-          COORDINATES_TOKEN: ${{ secrets.COORDINATES_TOKEN }}
-          MUSTACHE_MAIN_DIR: ${{ secrets.MUSTACHE_MAIN_DIR }}
           GITHUB_TOKEN: ${{ secrets.HUB_API_KEY }}
           BRANCH_NAME: 'main'
