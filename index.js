@@ -10,6 +10,7 @@ import * as cheerio from 'cheerio';
 import mustache from "mustache";
 import fetch from "node-fetch";
 import fs from 'fs';
+import DomParser from 'dom-parser';
 const MUSTACHE_MAIN_DIR = './main.mustache';
 
 const puppeteerService = NaN;
@@ -46,10 +47,20 @@ async function generateReadMe() {
   const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
   await delay(5000)
   console.log('print')
+
+ 
+  let bodyHTML = await page.evaluate(() =>  document.documentElement.outerHTML);
+  var parser = new DomParser();
+  var dom = parser.parseFromString(bodyHTML);
+  var inner_html = dom.getElementById('social').innerHTML
+
+
+  console.log(inner_html)
+
   await page.screenshot({ path: '_profile.png' })
   .then(screen => {
     fs.writeFileSync('profile.png', screen);
-    fs.writeFileSync('README.md', '<p><img src="profile.png" /></p>');
+    fs.writeFileSync('README.md', inner_html);
   })
   
   const html = await page.content();
@@ -60,7 +71,11 @@ async function generateReadMe() {
   //await browser.close();
 }
 
-
+var stringToHTML = function (str) {
+	var parser = new DOMParser();
+	var doc = parser.parseFromString(str, 'text/html');
+	return doc.body;
+};
 
 
 
