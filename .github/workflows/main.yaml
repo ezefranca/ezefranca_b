@@ -30,6 +30,9 @@ jobs:
         run: echo $OPEN_WEATHER_MAP_KEY
       - name: Commit and Push new README.md to the repository
         uses: mikeal/publish-to-github-action@master
-        env:
+      - name: Push new files back to master.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: 'main'
+        uses: mikeal/publish-to-github-action@1.0.0
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_NAME: 'main'
