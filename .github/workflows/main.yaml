@@ -25,14 +25,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Generate README file
-        run: 
-        echo "$OPEN_WEATHER_MAP_KEY"
-        echo "$STEAM_API_KEY"
-        echo "$LASTFM_API_KEY"
-        echo "$TWITTER_API_KEY"
-        echo "$HUB_API_KEY"
-        echo 'puta que pariu'
-        node index.js
+        run: node index.js 
       - name: Commit and Push new README.md to the repository
         uses: mikeal/publish-to-github-action@master
         with:
@@ -47,7 +40,7 @@ jobs:
           COORDINATES_TOKEN: ${{ secrets.COORDINATES_TOKEN }}
           MUSTACHE_MAIN_DIR: ${{ secrets.MUSTACHE_MAIN_DIR }}
           GITHUB_TOKEN: ${{ secrets.HUB_API_KEY }}
-        env: 
+        env:
           OPEN_WEATHER_MAP_KEY: ${{ secrets.OPEN_WEATHER_MAP_KEY }}
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
