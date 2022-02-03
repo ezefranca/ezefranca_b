@@ -1,1 +1,0 @@
-<p><img src="profile.png" /></p>
