@@ -56,7 +56,7 @@ async function generateReadMe() {
   .then(screen => {
     fs.writeFileSync(`img_history/${Date.now()}.png`, screen);
     fs.writeFileSync(`data_history/${Date.now()}.MD`, inner_html)
-    let finalReadMe = `## Hi, I am Ezequiel<br> #### I enjoy building creative things that could be fun. ${inner_html} <br> (This README is updated every 15 minutes) last update <code>${Date()}</code>` 
+    let finalReadMe = `## Hi, I am Ezequiel<br> I enjoy building creative things. ${inner_html} <br> (This README is updated every 15 minutes) last update <code>${Date()}</code>` 
     fs.writeFileSync('README.md', finalReadMe);
   })
   
