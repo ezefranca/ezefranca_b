@@ -60,6 +60,7 @@ async function generateReadMe() {
   await page.screenshot({ path: '_profile.png' })
   .then(screen => {
     fs.writeFileSync('profile.png', screen);
+    let finalReadMe = `[![README build](https://github.com/ezefranca/ezefranca/actions/workflows/main.yaml/badge.svg)](https://github.com/ezefranca/ezefranca/actions/workflows/main.yaml) <br> ${inner_html} <br> (This README is updated every 5 minutes) last update <code>${Date()}</code>` 
     fs.writeFileSync('README.md', inner_html);
   })
   
