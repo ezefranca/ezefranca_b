@@ -45,17 +45,12 @@ async function generateReadMe() {
   const page = await browser.newPage();
   await page.goto(url);
   const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-  await delay(5000)
-  console.log('print')
-
- 
+  await delay(10000)
+  
   let bodyHTML = await page.evaluate(() =>  document.documentElement.outerHTML);
   var parser = new DomParser();
   var dom = parser.parseFromString(bodyHTML);
   var inner_html = dom.getElementById('social').innerHTML
-
-
-  console.log(inner_html)
 
   await page.screenshot({ path: '_profile.png' })
   .then(screen => {
@@ -64,12 +59,7 @@ async function generateReadMe() {
     fs.writeFileSync('README.md', finalReadMe);
   })
   
-  const html = await page.content();
-  const $ = cheerio.load(html);
-  const span = $('.social');
-  console.log(span.text());
   process.exit();
-  //await browser.close();
 }
 
 var stringToHTML = function (str) {
