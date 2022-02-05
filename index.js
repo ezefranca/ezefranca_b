@@ -40,7 +40,7 @@ async function generateReadMe() {
   const url = "https://ezequiel.app";
 
   const browser = await puppeteer.launch({
-    defaultViewport: {width: 1300, height: 1200, deviceScaleFactor:5}
+    defaultViewport: {width: 1300, height: 1500, deviceScaleFactor:5}
 });
   const page = await browser.newPage();
   await page.goto(url);
