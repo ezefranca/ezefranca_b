@@ -37,7 +37,7 @@ var DATA = {
 
 async function generateReadMe() {
 
-  const url = "https://ezequiel.app";
+  const url = "https://ezequiel.app/about.html";
 
   const browser = await puppeteer.launch({
     defaultViewport: {width: 1300, height: 1500, deviceScaleFactor:5}
