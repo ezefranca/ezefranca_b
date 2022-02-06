@@ -14,27 +14,7 @@ import DomParser from 'dom-parser';
 const MUSTACHE_MAIN_DIR = './main.mustache';
 
 const puppeteerService = NaN;
-// import { puppeteerService } from './services/puppeteer.service'
-// /**
-//   * DATA is the object that contains all
-//   * the data to be provided to Mustache
-//   * Notice the "name" and "date" property.
-// */
-var DATA = {
-  name: 'Ezequiel',
-  date: new Date().toLocaleDateString('en-US', {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    timeZoneName: 'short',
-    timeZone: 'Europe/Madrid',
-  }),
-};
-
 		
-
 async function generateReadMe() {
 
   const url = "https://ezequiel.app/about.html";
@@ -56,7 +36,7 @@ async function generateReadMe() {
   .then(screen => {
     fs.writeFileSync(`img_history/${Date.now()}.png`, screen);
     fs.writeFileSync(`data_history/${Date.now()}.MD`, inner_html)
-    let finalReadMe = `## Hi, I am Ezequiel<br> I enjoy building creative things. ${inner_html} <br> (This README is updated every 15 minutes) last update <code>${Date()}</code>` 
+    let finalReadMe = `## Hi, I am Ezequiel<br> > I enjoy building creative things. ${inner_html} <br> (This README is updated every 15 minutes) last update :shipit: <code>${Date()}</code>` 
     fs.writeFileSync('README.md', finalReadMe);
   })
   
