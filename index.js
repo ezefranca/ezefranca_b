@@ -1,12 +1,9 @@
-// index.js
 
-// const aqicolors = ['#fff', '#00e400', '#ffff00', '#ff7e00', '#ff0000', '#8f3f97', '#7e0023']
 import dotenv from 'dotenv';
 import puppeteer from 'puppeteer'
 import 'dotenv/config'
 import * as cheerio from 'cheerio';
-// //require('dotenv').config();
-// //const Mustache = require('mustache');
+
 import mustache from "mustache";
 import fetch from "node-fetch";
 import fs from 'fs';
@@ -36,7 +33,7 @@ async function generateReadMe() {
   .then(screen => {
     fs.writeFileSync(`img_history/${Date.now()}.png`, screen);
     fs.writeFileSync(`data_history/${Date.now()}.MD`, inner_html)
-    let finalReadMe = `## Hi, I am Ezequiel<br> > I enjoy building creative things. ${inner_html} <br> (This README is updated every 15 minutes) last update :shipit: <code>${Date()}</code>` 
+    let finalReadMe = `## Hi, I am Ezequiel<br> >I enjoy building creative things. ${inner_html} <br> (:octocat: This README is updated every ~60 minutes) last update :shipit: <code>${Date()}</code>` 
     fs.writeFileSync('README.md', finalReadMe);
   })
   
