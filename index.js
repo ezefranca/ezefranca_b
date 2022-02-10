@@ -33,7 +33,7 @@ async function generateReadMe() {
   .then(screen => {
     fs.writeFileSync(`img_history/${Date.now()}.png`, screen);
     fs.writeFileSync(`data_history/${Date.now()}.MD`, inner_html)
-    let finalReadMe = `## Hi, I am Ezequiel<br> >I enjoy building creative things. ${inner_html} <br> (:octocat: This README is updated every ~60 minutes) last update :shipit: <code>${Date()}</code>` 
+    let finalReadMe = `## ![](https://camo.githubusercontent.com/e8e7b06ecf583bc040eb60e44eb5b8e0ecc5421320a92929ce21522dbc34c891/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6876524a434c467a6361737252346961377a2f67697068792e676966) Hi, my name is Ezequiel<br><br>  I'm a software developer who enjoys who loves building creative things. ${inner_html} <br> (:octocat: This README is updated every ~60 minutes) <br> last update :shipit: <code>${Date()}</code>` 
     fs.writeFileSync('README.md', finalReadMe);
   })
   
