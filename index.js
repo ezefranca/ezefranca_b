@@ -17,7 +17,7 @@ async function generateReadMe() {
   const url = "https://ezequiel.app/about.html";
 
   const browser = await puppeteer.launch({
-    defaultViewport: {width: 1300, height: 1500, deviceScaleFactor:5}
+    defaultViewport: {width: 1300, height: 1700, deviceScaleFactor:5}
 });
   const page = await browser.newPage();
   await page.goto(url);
@@ -33,7 +33,7 @@ async function generateReadMe() {
   .then(screen => {
     fs.writeFileSync(`img_history/${Date.now()}.png`, screen);
     fs.writeFileSync(`data_history/${Date.now()}.MD`, inner_html)
-    let finalReadMe = `## ![](https://camo.githubusercontent.com/e8e7b06ecf583bc040eb60e44eb5b8e0ecc5421320a92929ce21522dbc34c891/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6876524a434c467a6361737252346961377a2f67697068792e676966) Hi, my name is Ezequiel<br><br>  I'm a software developer who enjoys who loves building creative things. ${inner_html} <br> (:octocat: This README is updated every ~60 minutes) <br> last update :shipit: <code>${Date()}</code>` 
+    let finalReadMe = `<img height="30px" width="30px" src="https://camo.githubusercontent.com/e8e7b06ecf583bc040eb60e44eb5b8e0ecc5421320a92929ce21522dbc34c891/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6876524a434c467a6361737252346961377a2f67697068792e676966"></img> ## Hi, my name is Ezequiel<br><br>   > I'm a software developer who enjoys who loves building creative things. ${inner_html} <br><br> :octocat: This README is updated every ~60 minutes <br><br>  :shipit: last update <code>${Date()}</code>` 
     fs.writeFileSync('README.md', finalReadMe);
   })
   
