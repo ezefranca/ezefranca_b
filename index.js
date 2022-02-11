@@ -30,14 +30,14 @@ async function generateReadMe() {
   var inner_html = dom.getElementById('social').innerHTML
   var items = inner_html.replaceAll('<p>', '<li>')
   items = items.replaceAll('</p>', '</li>')
-  items = items.replaceAll('<hr>', '')
+  items = items.replaceAll('<hr/>', '')
   
 
   await page.screenshot({ path: 'profile.png' })
   .then(screen => {
     fs.writeFileSync(`img_history/${Date.now()}.png`, screen);
     fs.writeFileSync(`data_history/${Date.now()}.MD`, inner_html)
-    let finalReadMe = `<h2><img height="30px" width="30px" src="https://camo.githubusercontent.com/e8e7b06ecf583bc040eb60e44eb5b8e0ecc5421320a92929ce21522dbc34c891/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6876524a434c467a6361737252346961377a2f67697068792e676966"></img>Hi, my name is Ezequiel</h2> <blockquote> I'm a software developer who enjoys who loves building creative things. </blockquote><ul> ${items} </ul><br> :octocat: This README is updated every ~60 minutes <br><br>  :shipit: last update <code>${Date()}</code>` 
+    let finalReadMe = `<h2><img height="30px" width="30px" src="https://camo.githubusercontent.com/e8e7b06ecf583bc040eb60e44eb5b8e0ecc5421320a92929ce21522dbc34c891/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6876524a434c467a6361737252346961377a2f67697068792e676966"></img>Hi, my name is Ezequiel</h2> <blockquote> I'm a software developer who enjoys who loves building creative things. </blockquote><ul> ${items}  <li>:octocat: This README is updated every ~60 minutes </li><li> :shipit: last update <code>${Date()}</code></li></ul><br>` 
     fs.writeFileSync('README.md', finalReadMe);
   })
   
