@@ -8,7 +8,6 @@ import mustache from "mustache";
 import fetch from "node-fetch";
 import fs from 'fs';
 import DomParser from 'dom-parser';
-const MUSTACHE_MAIN_DIR = './main.mustache';
 
 const puppeteerService = NaN;
 		
@@ -22,7 +21,7 @@ async function generateReadMe() {
   const page = await browser.newPage();
   await page.goto(url);
   const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-  await delay(10000)
+  await delay(12000)
   
   let bodyHTML = await page.evaluate(() =>  document.documentElement.outerHTML);
   var parser = new DomParser();
