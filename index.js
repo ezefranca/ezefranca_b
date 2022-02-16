@@ -1,62 +1,42 @@
-// index.js
 
-// const aqicolors = ['#fff', '#00e400', '#ffff00', '#ff7e00', '#ff0000', '#8f3f97', '#7e0023']
 import dotenv from 'dotenv';
 import puppeteer from 'puppeteer'
 import 'dotenv/config'
 import * as cheerio from 'cheerio';
-// //require('dotenv').config();
-// //const Mustache = require('mustache');
+
 import mustache from "mustache";
 import fetch from "node-fetch";
 import fs from 'fs';
 import DomParser from 'dom-parser';
-const MUSTACHE_MAIN_DIR = './main.mustache';
 
 const puppeteerService = NaN;
-// import { puppeteerService } from './services/puppeteer.service'
-// /**
-//   * DATA is the object that contains all
-//   * the data to be provided to Mustache
-//   * Notice the "name" and "date" property.
-// */
-var DATA = {
-  name: 'Ezequiel',
-  date: new Date().toLocaleDateString('en-US', {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    timeZoneName: 'short',
-    timeZone: 'Europe/Madrid',
-  }),
-};
-
 		
-
 async function generateReadMe() {
 
-  const url = "https://ezequiel.app";
+  const url = "https://ezequiel.app/about.html";
 
   const browser = await puppeteer.launch({
-    defaultViewport: {width: 1300, height: 1200, deviceScaleFactor:5}
+    defaultViewport: {width: 1300, height: 1700, deviceScaleFactor:5}
 });
   const page = await browser.newPage();
   await page.goto(url);
   const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
-  await delay(10000)
+  await delay(12000)
   
   let bodyHTML = await page.evaluate(() =>  document.documentElement.outerHTML);
   var parser = new DomParser();
   var dom = parser.parseFromString(bodyHTML);
   var inner_html = dom.getElementById('social').innerHTML
+  var items = inner_html.replaceAll('<p>', '<li>')
+  items = items.replaceAll('</p>', '</li>')
+  items = items.replaceAll('<hr/>', '')
+  
 
   await page.screenshot({ path: 'profile.png' })
   .then(screen => {
     fs.writeFileSync(`img_history/${Date.now()}.png`, screen);
     fs.writeFileSync(`data_history/${Date.now()}.MD`, inner_html)
-    let finalReadMe = `## Hi, I am Ezequiel<br> I enjoy building creative things. ${inner_html} <br> (This README is updated every 15 minutes) last update <code>${Date()}</code>` 
+    let finalReadMe = `<h2><img height="30px" width="30px" src="https://camo.githubusercontent.com/e8e7b06ecf583bc040eb60e44eb5b8e0ecc5421320a92929ce21522dbc34c891/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6876524a434c467a6361737252346961377a2f67697068792e676966"></img>Hi, my name is Ezequiel</h2><hr style='background-color:#e67e22;border-width:0;color:#000000;height:8px;line-height:0;text-align:left;width:50%;'/> <blockquote> I'm a software developer who enjoys building creative things. </blockquote> <ul> ${items}  </ul> <ul><li>:octocat: This README is updated every ~60 minutes </li><li> :shipit: last update <code>${Date()}</code></li></ul><br>` 
     fs.writeFileSync('README.md', finalReadMe);
   })
   

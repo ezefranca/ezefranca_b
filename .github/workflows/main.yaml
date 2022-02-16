@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 * * * *'
 
 jobs:
   build:
@@ -22,12 +22,16 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
-      - name: wake mothefucker
-        run: curl https://ezequiel.app
-      - name: Install dependencies
+      - name: Clean the cache
+        run: curl https://ezefranca.herokuapp.com/cache
+      - name: Hello computer
+        run: curl https://ezequiel.app/about.html
+      - name: Sleep for 5 seconds, you are tired
+        run: sleep 5s
+      - name: Now Install the dependencies
         run: npm install
-      - name: Fala alguma coisa
-        run: echo aeee caralho
+      - name: Speak computar
+        run: echo I am a good computer!
       - name: Generate README file
         run: node index.js
       - name: Commit and Push new README.md to the repository
