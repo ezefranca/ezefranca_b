@@ -7,7 +7,7 @@
 <li><span style="font-size: 150%" class="darkmode-ignore emojiText">🚲&nbsp;</span><span class="itemline" id="strava">Last activity:&nbsp;</span></li>
 <li><span style="font-size: 150%" class="darkmode-ignore emojiText">🧠&nbsp;</span><span class="itemline" id="mood">I'm feeling&nbsp;</span></li>
 <li><span style="font-size: 150%" class="darkmode-ignore emojiText">🎧&nbsp;</span><span class="itemline" id="lastfm" style="opacity: 0;">...&nbsp;</span></li>
-<li><span style="font-size: 150%" class="darkmode-ignore emojiText">📍&nbsp;</span><span class="itemline" id="location" style="opacity: 1;"><span class="new-box">São Paulo, Brazil   <br/><sup><small class="text-muted"> current time, <var>01h</var><var>03</var> (<var>25/February/2022</var>)</small></sup></span></span></li>
+<li><span style="font-size: 150%" class="darkmode-ignore emojiText">📍&nbsp;</span><span class="itemline" id="location" style="opacity: 1;"><span class="new-box">São Paulo, Brazil   <br/><sup><small class="text-muted"> current time, <var>02h</var><var>03</var> (<var>25/February/2022</var>)</small></sup></span></span></li>
 <li><span style="font-size: 150%" class="darkmode-ignore emojiText">🌡&nbsp;</span><span class="itemline" id="weather">Weather is&nbsp;</span></li>
 <li><span style="font-size: 150%" class="darkmode-ignore emojiText">💨&nbsp;</span><span class="itemline" id="airquality">Air Quality&nbsp;</span></li>
 <li><span style="font-size: 150%" class="darkmode-ignore emojiText">📝&nbsp;</span><span class="itemline" id="todo" style="opacity: 0;">My to-do list&nbsp;</span></li>
@@ -18,4 +18,4 @@
 <li><span style="font-size: 150%" class="darkmode-ignore emojiText">📱&nbsp;</span><span class="itemline" id="screentime">Screen time &nbsp;</span></li>
 <li><span style="font-size: 150%" class="darkmode-ignore emojiText">🐦&nbsp;</span><span class="itemline" id="twitter">Last activity &nbsp;</span></li>
 
-  </ul> <ul><li>:octocat: This README is updated every ~60 minutes </li><li> :shipit: last update <code>Fri Feb 25 2022 04:03:41 GMT+0000 (Coordinated Universal Time)</code></li></ul><br>
+  </ul> <ul><li>:octocat: This README is updated every ~60 minutes </li><li> :shipit: last update <code>Fri Feb 25 2022 05:03:39 GMT+0000 (Coordinated Universal Time)</code></li></ul><br>
