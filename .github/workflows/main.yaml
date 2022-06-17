@@ -25,7 +25,7 @@ jobs:
       - name: Clean the cache
         run: curl https://ezefranca.herokuapp.com/cache
       - name: Hello computer
-        run: curl https://ezequiel.app/readme.html
+        run: curl https://ezefranca.com/readme.html
       - name: Sleep for 5 seconds, you are tired
         run: sleep 5s
       - name: Now Install the dependencies
