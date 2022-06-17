@@ -13,7 +13,7 @@ const puppeteerService = NaN;
 		
 async function generateReadMe() {
 
-  const url = "https://ezequiel.app/readme.html";
+  const url = "https://ezefranca.com/readme.html";
 
   const browser = await puppeteer.launch({
     defaultViewport: {width: 1300, height: 1700, deviceScaleFactor:5}
