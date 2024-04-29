@@ -18,6 +18,6 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/7b11b155153b825a3dbd6e4a600345ac.jpg) | [Forgiven by Alanis Morissette - Jagged Little Pill (2015 Remaster)](https://www.last.fm/music/Alanis+Morissette/_/Forgiven) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/7b11b155153b825a3dbd6e4a600345ac.jpg) | [Head Over Feet by Alanis Morissette - Jagged Little Pill (2015 Remaster)](https://www.last.fm/music/Alanis+Morissette/_/Head+Over+Feet) |
 |---------------|:---------------------------------------------|
 
