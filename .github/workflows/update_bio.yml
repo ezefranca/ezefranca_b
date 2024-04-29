@@ -1,0 +1,25 @@
+name: Update GitHub Bio
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
+
+jobs:
+  update_bio:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Update GitHub Bio
+        uses: docker://ghcr.io/github/super-linter:latest
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          curl -X PATCH \
+            -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d '{"bio": "Sua nova biografia aqui"}' \
+            https://api.github.com/user
