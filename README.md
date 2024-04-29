@@ -11,3 +11,12 @@ Last blog posts:
 - 📃 Presenting at MobileSoft'24
 - 🎖️ Internal Hackathon Miniclip 2024
 - 🥈 Tech for Good IADE 2024
+
+
+Last song listened: [A Monster Only You Can't See by Sonata Arctica - Clear Cold Beyond](https://www.last.fm/music/Sonata+Arctica/_/A+Monster+Only+You+Can%27t+See)
+![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/cb5def8d6a94ab2e650fe543b18d5e2d.jpg)
+
+Last blog posts:
+- 📃 Presenting at MobileSoft'24
+- 🎖️ Internal Hackathon Miniclip 2024
+- 🥈 Tech for Good IADE 2024
