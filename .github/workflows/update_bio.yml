@@ -1,4 +1,4 @@
-name: Update GitHub Bio
+name: Update GitHub Bio every day
 
 on:
   schedule:
