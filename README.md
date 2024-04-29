@@ -15,7 +15,5 @@
 
 > [!IMPORTANT]
 > > Last song listened.
-
-> > | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/84f0a16d520f435494d0ead313005e62.png) | [Time](https://www.last.fm/music/Angra/_/Time) | Angra | Angels Cry |
-> >  |---------------|:---------------|:--------------|:------------|
-
+> > | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/84f0a16d520f435494d0ead313005e62.png) | [Carry On by Angra - Angels Cry](https://www.last.fm/music/Angra/_/Carry+On) | 
+> > |---------------|:---------------------------------------------|
