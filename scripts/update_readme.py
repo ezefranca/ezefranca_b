@@ -9,15 +9,16 @@ LASTFM_API_KEY = os.getenv('LASTFM_API_KEY')
 def get_last_posts(limit=3):
     rss_url = "http://ezefranca.com/feed.rss"
     feed = feedparser.parse(rss_url)
-    return [entry.title for entry in feed.entries[:limit]]
+    # Extract post titles and URLs
+    posts = [{'title': entry.title, 'link': entry.link} for entry in feed.entries[:limit]]
+    return posts
 
 def get_last_song():
     url = f"http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=ezefranca&api_key={LASTFM_API_KEY}&format=json"
     response = requests.get(url)
     data = response.json()
-    # Parse the first track from the recent tracks
     if data['recenttracks']['track']:
-        track = data['recenttracks']['track'][0]  # Get the latest track
+        track = data['recenttracks']['track'][0]
         artist = track['artist']['#text']
         song_name = track['name']
         album_name = track['album']['#text']
@@ -36,20 +37,27 @@ def get_last_song():
 
 def update_readme(posts, song):
     day_name = datetime.datetime.now().strftime('%A')
-    with open('README.md', 'r+') as file:
-        content = file.read()
-        content = content.replace('{$day_name}', day_name)
+    with open('README.md', 'w') as file:
+        # Writing the greeting with the day name
+        file.write(f"> Happy {day_name}! 👋🏻\n\n")
+
+        # Writing the tip section
+        file.write("> [!TIP]\n")
+        file.write("> Hey, 👋🏻, I'm Ezequiel (Ezekiel), an iOS developer and Creative Technologist with experience in various areas of technology such as mobile software development, game development, project design, software engineering, electronics, and the Internet of Things. I also enjoy creating software tools and making basil pesto. </blockquote>\n\n")
+        file.write("> Most of the stuff on here is storage space.\n\n")
+
+        # Writing the last song listened section
         if song:
-            new_content = f"Last song listened: [{song['name']} by {song['artist']} - {song['album']}]({song['url']})\n![Cover Image]({song['image']})"
-            content += "\n\n" + new_content
-        # Insert posts into the content
-        if posts:
-            content += "\n\nLast blog posts:\n"
-            for post in posts:
-                content += f"- {post}\n"
-        file.seek(0)
-        file.write(content)
-        file.truncate()
+            file.write("> [!IMPORTANT]\n")
+            file.write("> Last song listened.\n\n")
+            file.write(f"| ![Cover Image]({song['image']}) | [{song['name']} by {song['artist']} - {song['album']}]({song['url']}) |\n")
+            file.write("|---------------|:---------------------------------------------|\n\n")
+
+        # Writing the blog posts section
+        file.write("> [!NOTE]\n")
+        file.write("> Last personal updates:\n")
+        for post in posts:
+            file.write(f"  - [{post['title']}]({post['link']})\n")
 
 # Main execution
 posts = get_last_posts()
