@@ -15,6 +15,6 @@
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/7b11b155153b825a3dbd6e4a600345ac.jpg) | [Mary Jane by Alanis Morissette - Jagged Little Pill (2015 Remaster)](https://www.last.fm/music/Alanis+Morissette/_/Mary+Jane) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/7b11b155153b825a3dbd6e4a600345ac.jpg) | [Ironic by Alanis Morissette - Jagged Little Pill (2015 Remaster)](https://www.last.fm/music/Alanis+Morissette/_/Ironic) |
 |---------------|:---------------------------------------------|
 
