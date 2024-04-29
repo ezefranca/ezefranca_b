@@ -8,7 +8,7 @@
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/e05558eb74c6e9b48c5ed6927aafa2cb.jpg) | [Taste of India by Aerosmith - i don't want to miss a thing ep](https://www.last.fm/music/Aerosmith/_/Taste+of+India) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/35cf2fbd90387a2567b80f363d574cbe.png) | [Beyond Beautiful by Aerosmith - Just Push Play](https://www.last.fm/music/Aerosmith/_/Beyond+Beautiful) |
 |---------------|:---------------------------------------------|
 
 > [!NOTE]
