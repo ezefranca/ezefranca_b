@@ -2,6 +2,7 @@
 💼📱 [@miniclip](https://github.com/miniclip) and advancing my PhD studies in Technology 👨🏻‍💻🎓 [@iade-pt](https://github.com/iade-pt). 👾 Passionate about game development and leveraging tech for creative solutions!
 > [!TIP]
 > Most of the stuff on here is storage space.
+
 > [!NOTE]
 > Last personal updates:
   - [📃 Presenting at MobileSoft'24](https://ezefranca.com/news/presenting-mobilesoft-2024)
@@ -10,6 +11,6 @@
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/35cf2fbd90387a2567b80f363d574cbe.png) | [Fly Away From Here by Aerosmith - Just Push Play](https://www.last.fm/music/Aerosmith/_/Fly+Away+From+Here) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/7b11b155153b825a3dbd6e4a600345ac.jpg) | [Hand in My Pocket by Alanis Morissette - Jagged Little Pill (2015 Remaster)](https://www.last.fm/music/Alanis+Morissette/_/Hand+in+My+Pocket) |
 |---------------|:---------------------------------------------|
 
