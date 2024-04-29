@@ -8,7 +8,7 @@
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/e05558eb74c6e9b48c5ed6927aafa2cb.jpg) | [I Don't Want to Miss a Thing (From "Armageddon" Soundtrack) by Aerosmith - i don't want to miss a thing ep](https://www.last.fm/music/Aerosmith/_/I+Don%27t+Want+to+Miss+a+Thing+(From+%22Armageddon%22+Soundtrack)) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/e05558eb74c6e9b48c5ed6927aafa2cb.jpg) | [Taste of India by Aerosmith - i don't want to miss a thing ep](https://www.last.fm/music/Aerosmith/_/Taste+of+India) |
 |---------------|:---------------------------------------------|
 
 > [!NOTE]
