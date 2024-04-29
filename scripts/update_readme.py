@@ -59,7 +59,7 @@ def update_readme(posts, song, bio):
 
         # Writing the tip section
         file.write("> [!TIP]\n")
-        file.write("> Most of the stuff on here is storage space.\n")
+        file.write("> Most of the stuff on here is storage space.\n\n")
 
         # Writing the blog posts section
         file.write("> [!NOTE]\n")
