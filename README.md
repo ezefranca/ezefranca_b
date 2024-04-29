@@ -12,9 +12,10 @@
 >  - [📃 Presenting at MobileSoft'24](https://ezefranca.com/news/presenting-mobilesoft-2024)
 >  - [🎖️ Internal Hackathon Miniclip 2024](https://ezefranca.com/news/hackathon-miniclip-2024)
 >  - [🥈 Tech for Good IADE 2024](https://ezefranca.com/news/tech-for-good-iade-2024)
+
 > [!IMPORTANT]
 > > Last song listened.
 
-> > | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/84f0a16d520f435494d0ead313005e62.png) | [Carry On by Angra - Angels Cry](https://www.last.fm/music/Angra/_/Carry+On) |
-> > |---------------|:---------------------------------------------|
+> > | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/84f0a16d520f435494d0ead313005e62.png) | [Time](https://www.last.fm/music/Angra/_/Time) | Angra | Angels Cry |
+> >  |---------------|:---------------|:--------------|:------------|
 
