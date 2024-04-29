@@ -1,4 +1,4 @@
-name: Update GitHub Bio
+name: BIO
 
 on:
   push:
@@ -21,9 +21,9 @@ jobs:
 
       - name: Generate bio
         id: gen_bio
-        run: python generate_bio.py # This script needs to be saved as generate_bio.py
+        run: python scripts/generate_bio.py # This script needs to be saved as generate_bio.py
 
-      - name: Update GitHub Bio
+      - name: BIO
         run: |
           curl -X PATCH \
             -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
