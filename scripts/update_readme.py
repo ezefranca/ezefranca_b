@@ -1,6 +1,10 @@
 import feedparser
 import requests
 import datetime
+import os
+
+LASTFM_API_KEY = os.getenv('LASTFM_API_KEY')
+LASTFM_API_SECRET = os.getenv('LASTFM_API_SECRET')
 
 def get_last_posts(limit=3):
     rss_url = "http://ezefranca.com/feed.rss"
