@@ -19,7 +19,7 @@ jobs:
         id: bio
         run: |
           DATE=$(date '+%Y-%m-%d')
-          BIO_CONTENT="💼 Mobile Developer @miniclip 📲👾\n📚 Phd Student @iade-pt 👨🏻‍💻 \n\n Today is $DATE."
+          BIO_CONTENT="💼 Mobile Developer @miniclip 📲👾\\n📚 Phd Student @iade-pt 👨🏻‍💻 \\n\\n Today is $DATE."
           echo "::set-output name=bio::$BIO_CONTENT"
 
       - name: Update GitHub Bio
