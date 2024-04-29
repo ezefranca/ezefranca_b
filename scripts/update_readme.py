@@ -11,12 +11,13 @@ def get_current_bio():
     day_name = current_date.strftime('%A')
     date_str = current_date.strftime('%d of %B of %Y')
 
-    # Create a bio content with context and emojis
+    # Create an enriched bio content with context, emojis, and Markdown
     bio_content = (
-        f"> 👋 Hello, nice {day_name}, on {date_str}."
-        f"> 🙋🏻‍♂️ I'm Ezequiel (Ezekiel), a developer and creative technologist. I enjoy creating software tools and making basil pesto."
-        f"> 💼📱 Mobile developer [@miniclip](https://github.com/miniclip)."
-        f"> 👨🏻‍💻🎓 PhD student [@iade-pt](https://github.com/iade-pt)."
+        f"👋 **Hello!** Wishing you a wonderful {day_name} on this {date_str}. \n\n"
+        f"🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist. I specialize in creating innovative software tools and have a keen interest in game development and technology. Making vegan basil pesto is one of my favorite pastimes. \n\n"
+        f"💼📱 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com). \n\n"
+        f"👨🏻‍💻🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt). \n\n"
+        f"Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca)"
     )
 
     return bio_content
