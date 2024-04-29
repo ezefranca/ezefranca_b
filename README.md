@@ -8,7 +8,7 @@
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/cb5def8d6a94ab2e650fe543b18d5e2d.jpg) | [A Monster Only You Can't See by Sonata Arctica - Clear Cold Beyond](https://www.last.fm/music/Sonata+Arctica/_/A+Monster+Only+You+Can%27t+See) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/f97e88ebb519bf200380291bf4e18f97.jpg) | [Take On Me (2015 Remastered Version) by a-ha - Hunting High & Low (Remastered)](https://www.last.fm/music/a-ha/_/Take+On+Me+(2015+Remastered+Version)) |
 |---------------|:---------------------------------------------|
 
 > [!NOTE]
