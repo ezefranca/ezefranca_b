@@ -80,10 +80,6 @@ def update_readme(posts, song, bio):
         if bio:
             file.write(f"{bio}\n")
 
-        # Writing the tip section
-        file.write("> [!TIP]\n")
-        file.write()
-
         # Writing the blog posts section
         file.write("> [!NOTE]\n")
         file.write("> Last personal updates:\n")
