@@ -13,10 +13,10 @@ def get_current_bio():
 
     # Create a bio content with context and emojis
     bio_content = (
-        f"👋 Hello, nice {day_name}, on {date_str}. I am working as a Mobile Developer "
-        f"🙋🏻‍♂️ I'm Ezequiel (Ezekiel), a developer and creative technologist. I enjoy creating software tools and making basil pesto.\n"
-        f"💼📱 [@miniclip](https://github.com/miniclip) and advancing my PhD studies in Technology 👨🏻‍💻🎓 [@iade-pt](https://github.com/iade-pt). "
-        f"👾 Passionate about game development and leveraging tech for creative solutions!"
+        f"> 👋 Hello, nice {day_name}, on {date_str}."
+        f"> 🙋🏻‍♂️ I'm Ezequiel (Ezekiel), a developer and creative technologist. I enjoy creating software tools and making basil pesto."
+        f"> 💼📱 Mobile developer [@miniclip](https://github.com/miniclip)."
+        f"> 👨🏻‍💻🎓 PhD student [@iade-pt](https://github.com/iade-pt)."
     )
 
     return bio_content
