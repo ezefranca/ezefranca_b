@@ -8,7 +8,6 @@ from cachetools import TTLCache
 
 # Obtain API keys from environment variables
 LASTFM_API_KEY = os.getenv('LASTFM_API_KEY')
-cache = TTLCache(maxsize=100, ttl=7200)  # 7200 seconds = 2 hours
 
 def get_current_bio(book="Not specified"):
     current_date = datetime.datetime.now()
@@ -58,33 +57,31 @@ def get_last_song():
         return None
 
 def get_last_book():
-    value = cache.get("book")
-    if value is None:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:96.0) Gecko/20100101 Firefox/96.0',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none',
-            'Sec-Fetch-User': '?1',
-            'If-None-Match': 'W/"f79b14fd1aab2bac76e8cddd3e691641"',
-            'Cache-Control': 'max-age=0'
-        }
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:96.0) Gecko/20100101 Firefox/96.0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User': '?1',
+        'If-None-Match': 'W/"f79b14fd1aab2bac76e8cddd3e691641"',
+        'Cache-Control': 'max-age=0'
+    }
 
-        response = requests.get('https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos?shelf=currently-reading', headers=headers)
-        soup = BeautifulSoup(response.text, 'html.parser')
-        book_elements = soup.select('tr.bookalike')
-        if book_elements:
-            title = book_elements[0].select_one('td.title a').text.strip()
-            author = book_elements[0].select_one('td.author a').text.strip()
-            cache.set("book", title, 7200)
-            return title
-        return "No books found"
-    return value
+    response = requests.get('https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos?shelf=currently-reading', headers=headers)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    book_elements = soup.select('tr.bookalike')
+    if book_elements:
+        title = book_elements[0].select_one('td.title a').text.strip()
+        author = book_elements[0].select_one('td.author a').text.strip()
+        return f"{title} by {author}"
+  
+    else:
+        return None
 
 def update_readme(posts, song, bio):
     day_name = datetime.datetime.now().strftime('%A')
