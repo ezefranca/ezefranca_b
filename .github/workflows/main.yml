@@ -1,1 +1,31 @@
+name: Update GitHub Bio
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
+
+jobs:
+  update_bio:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate dynamic bio content
+        id: bio
+        run: |
+          BIO_CONTENT="Bio updated on: $(date '+%Y-%m-%d')"
+          echo "::set-output name=bio::$BIO_CONTENT"
+
+      - name: Update GitHub Bio
+        run: |
+          curl -X PATCH \
+            -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d "{\"bio\": \"${{ steps.bio.outputs.bio }}\"}" \
+            https://api.github.com/user
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
