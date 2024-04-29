@@ -1,12 +1,4 @@
-👋 **Hello!** Wishing you a wonderful Monday on this 29 of April of 2024. 
-
-🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist. I specialize in creating innovative software tools and have a keen interest in game development and technology. Making vegan basil pesto is one of my favorite pastimes. 
-
-💼📱 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com). 
-
-👨🏻‍💻🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt). 
-
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca)
+- 👋 **Hello!** Wishing you a wonderful Monday on this 29 of April of 2024.- 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.- 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).- 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt).- ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 > [!TIP]
 > Most of the stuff on here is storage space.
 
@@ -18,6 +10,6 @@ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/7b11b155153b825a3dbd6e4a600345ac.jpg) | [Head Over Feet by Alanis Morissette - Jagged Little Pill (2015 Remaster)](https://www.last.fm/music/Alanis+Morissette/_/Head+Over+Feet) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/7b11b155153b825a3dbd6e4a600345ac.jpg) | [Mary Jane by Alanis Morissette - Jagged Little Pill (2015 Remaster)](https://www.last.fm/music/Alanis+Morissette/_/Mary+Jane) |
 |---------------|:---------------------------------------------|
 
