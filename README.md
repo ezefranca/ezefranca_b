@@ -8,7 +8,7 @@
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/f97e88ebb519bf200380291bf4e18f97.jpg) | [Take On Me (2015 Remastered Version) by a-ha - Hunting High & Low (Remastered)](https://www.last.fm/music/a-ha/_/Take+On+Me+(2015+Remastered+Version)) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/75075bd01c96465e54fc250b22f83296.jpg) | [Rolling in the Deep by Adele - 21](https://www.last.fm/music/Adele/_/Rolling+in+the+Deep) |
 |---------------|:---------------------------------------------|
 
 > [!NOTE]
