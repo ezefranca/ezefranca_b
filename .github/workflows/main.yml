@@ -18,7 +18,8 @@ jobs:
       - name: Generate dynamic bio content
         id: bio
         run: |
-          BIO_CONTENT="Bio updated on: $(date '+%Y-%m-%d')"
+          DATE=$(date '+%Y-%m-%d')
+          BIO_CONTENT="💼 Mobile Developer @miniclip 📲👾\n📚 Phd Student @iade-pt 👨🏻‍💻\nToday is $DATE."
           echo "::set-output name=bio::$BIO_CONTENT"
 
       - name: Update GitHub Bio
