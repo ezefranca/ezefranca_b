@@ -8,7 +8,7 @@
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/75075bd01c96465e54fc250b22f83296.jpg) | [Rumour Has It by Adele - 21](https://www.last.fm/music/Adele/_/Rumour+Has+It) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/e05558eb74c6e9b48c5ed6927aafa2cb.jpg) | [I Don't Want to Miss a Thing (From "Armageddon" Soundtrack) by Aerosmith - i don't want to miss a thing ep](https://www.last.fm/music/Aerosmith/_/I+Don%27t+Want+to+Miss+a+Thing+(From+%22Armageddon%22+Soundtrack)) |
 |---------------|:---------------------------------------------|
 
 > [!NOTE]
