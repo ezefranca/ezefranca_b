@@ -23,7 +23,7 @@ def update_readme(posts, song):
         content = file.read()
         content = content.replace('{$day_name}', datetime.datetime.now().strftime('%A'))
         # Insert posts and song into the content
-        cat content
+        print(content)
         file.seek(0)
         file.write(content)
         file.truncate()
