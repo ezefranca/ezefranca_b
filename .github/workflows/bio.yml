@@ -5,30 +5,32 @@ on:
     branches:
       - main
   schedule:
+    # Runs at 00:00 UTC every day
     - cron: '0 0 * * *'
 
 jobs:
   update_bio:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
+      - name: Generate dynamic bio content
+        id: bio
+        run: |
+          # Calculate the day and date
+          DAY=$(date '+%A, %d/%m/%Y')
+          # Set the bio content with the calendar emoji and formatted date
+          BIO_CONTENT="📅 $DAY"
+          echo "::set-output name=bio::$BIO_CONTENT"
 
-      - name: Generate bio
-        id: gen_bio
-        run: python scripts/update_bio.py # This script needs to be saved as generate_bio.py
-
-      - name: BIO
+      - name: Update GitHub Bio
         run: |
           curl -X PATCH \
             -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            -d "{\"bio\": \"${{ steps.gen_bio.outputs.bio_content }}\"}" \
+            -d "{\"bio\": \"${{ steps.bio.outputs.bio }}\"}" \
             https://api.github.com/user
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
