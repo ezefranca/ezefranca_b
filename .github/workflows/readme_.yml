@@ -1,11 +1,11 @@
-name: Update README
+name: README
 
 on:
   push:
     branches:
       - main
   schedule:
-    - cron: '*/5 * * * *'   # Diariamente à meia-noite UTC
+    - cron: '*/5 * * * *'
 
 jobs:
   update_readme:
