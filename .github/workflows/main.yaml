@@ -1,41 +1,30 @@
-name: README build
+name: Update GitHub Bio
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '0 * * * *'
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
 
 jobs:
-  build:
+  update_bio:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout current repository to Main branch
-        uses: actions/checkout@v1
-      - name: Setup NodeJs 17.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: '17.x'
-      - name: Cache dependencies and build outputs to improve workflow execution time.
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
-      - name: Clean the cache
-        run: curl https://ezefranca.herokuapp.com/cache
-      - name: Hello computer
-        run: curl https://ezefranca.com/readme.html
-      - name: Sleep for 5 seconds, you are tired
-        run: sleep 5s
-      - name: Now Install the dependencies
-        run: npm install
-      - name: Speak computar
-        run: echo I am a good computer!
-      - name: Generate README file
-        run: node index.js
-      - name: Commit and Push new README.md to the repository
-        uses: mikeal/publish-to-github-action@master
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Generate dynamic bio content
+        id: bio
+        run: |
+          BIO_CONTENT="Bio updated on: $(date '+%Y-%m-%d')"
+          echo "::set-output name=bio::$BIO_CONTENT"
+
+      - name: Update GitHub Bio
+        run: |
+          curl -X PATCH \
+            -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -d "{\"bio\": \"${{ steps.bio.outputs.bio }}\"}" \
+            https://api.github.com/user
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: 'main'
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
