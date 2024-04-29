@@ -8,7 +8,7 @@
 > [!IMPORTANT]
 > Last song listened.
 
-| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/75075bd01c96465e54fc250b22f83296.jpg) | [Rolling in the Deep by Adele - 21](https://www.last.fm/music/Adele/_/Rolling+in+the+Deep) |
+| ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/75075bd01c96465e54fc250b22f83296.jpg) | [Rumour Has It by Adele - 21](https://www.last.fm/music/Adele/_/Rumour+Has+It) |
 |---------------|:---------------------------------------------|
 
 > [!NOTE]
