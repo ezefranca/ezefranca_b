@@ -78,4 +78,4 @@ def update_readme(posts, song, bio):
 posts = get_last_posts()
 song = get_last_song()
 bio = get_current_bio()
-update_readme(posts, song)
+update_readme(posts, song, bio)
