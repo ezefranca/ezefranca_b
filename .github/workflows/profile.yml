@@ -19,8 +19,8 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install feedparser python-dateutil requests
-
+          pip install feedparser python-dateutil requests beautifulsoup4 cachetools
+          
       - name: Update README
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
