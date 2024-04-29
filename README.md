@@ -1,5 +1,4 @@
-👋 Hello, nice Monday, on 29 of April of 2024. I am working as a Mobile Developer 🙋🏻‍♂️ I'm Ezequiel (Ezekiel), a developer and creative technologist. I enjoy creating software tools and making basil pesto.
-💼📱 [@miniclip](https://github.com/miniclip) and advancing my PhD studies in Technology 👨🏻‍💻🎓 [@iade-pt](https://github.com/iade-pt). 👾 Passionate about game development and leveraging tech for creative solutions!
+> 👋 Hello, nice Monday, on 29 of April of 2024.> 🙋🏻‍♂️ I'm Ezequiel (Ezekiel), a developer and creative technologist. I enjoy creating software tools and making basil pesto.> 💼📱 Mobile developer [@miniclip](https://github.com/miniclip).> 👨🏻‍💻🎓 PhD student [@iade-pt](https://github.com/iade-pt).
 > [!TIP]
 > Most of the stuff on here is storage space.
 
