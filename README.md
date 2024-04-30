@@ -7,7 +7,7 @@
 > - 📚 Currently reading Thinking in SwiftUI by Eidhof, Chris
 > - 🎮 No recent games played since 08/12/2023 on [Steam](https://steamcommunity.com/id/ezequielapp)
 > - 📺 Last watched [Young Sheldon](https://www.tvtime.com/show/328724) S7E6 "Baptists, Catholics and an Attempted Drowning" on 30/04/2024 via [TVTime](https://www.tvtime.com/user/4784821).
-> - 🎧 None
+> - 🎧 Helena (So Long & Goodnight) by [My Chemical Romance - Three Cheers for Sweet Revenge](https://www.last.fm/music/My+Chemical+Romance/_/Helena+(So+Long+&+Goodnight))
 > - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 > > Most of the stuff on here is storage space.
 
