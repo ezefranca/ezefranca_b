@@ -23,14 +23,16 @@ def get_current_bio(book="..."):
 
     weather = fetch_weather_and_pollution(LATITUDE, LONGITUDE)
     weather_info = (
-        f"{weather.get('emoji', '')} The weather where I am is {weather.get('description', '')}, "
-        f"{weather.get('temperature', 'N/A')}°C, humidity {weather.get('humidity', 'N/A')}%. "
-        f"<img src='{weather.get('icon_url', '')}' alt='weather-icon'>"
+        f"{weather.get('emoji', '')} The weather here is {weather.get('description', '')}, "
+        f"{weather.get('temperature', 'N/A')}°C and humidity {weather.get('humidity', 'N/A')}%. "
     )
+
+    weather_icon = f"<img src='{weather.get('icon_url', '')}' alt='weather-icon'>"
 
     last_game_info = get_last_game_played("76561198048997048")
     linkedin_info = 'Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).'
     bio_content = (
+        f"{weather_icon}\n"
         f"> [!TIP]\n"
         f"> - 👋 **Hello!** Wishing you a wonderful {day_name} on this {date_str}.\n"
         f"> - {weather_info}\n"
@@ -55,13 +57,13 @@ def get_last_game_played(steam_id):
         last_game = recent_games['games'][0]
         game_name = last_game['name']
         last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
-        return f"Last played {game_name} on {last_played.strftime('%d %b %Y')} on Steam"
+        return f"Last played {game_name} on {last_played.strftime('%d %b %Y')} on [Steam](https://steamcommunity.com/id/ezequielapp)"
     else: 
         from time import strftime, localtime
         userDetails = steam.users.get_user_details("76561198048997048")
         timestamp = userDetails['player']['lastlogoff']
         let = strftime('%d/%m/%Y', localtime(timestamp))
-        return f"No recent games played since {let} on Steam"
+        return f"No recent games played since {let} on [Steam](https://steamcommunity.com/id/ezequielapp)"
 
 def get_last_posts(limit=3):
     rss_url = "http://ezefranca.com/feed.rss"
