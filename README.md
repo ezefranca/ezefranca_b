@@ -1,6 +1,6 @@
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
-> - 🌡 The weather where I am is few clouds, 12.93°C, humidity 82%.
+> - 🌡 The weather where I am is light rain, 12.93°C, humidity 83%.
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
@@ -17,5 +17,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/085669cc3c4f4177bfd54a17739ec88c.png) | [Wherever You Will Go by The Calling - Camino Palmero](https://www.last.fm/music/The+Calling/_/Wherever+You+Will+Go) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/df27954a78474015b4bf9e8a4eb2649f.jpg) | [Fortune Faded by Red Hot Chili Peppers - Greatest Hits](https://www.last.fm/music/Red+Hot+Chili+Peppers/_/Fortune+Faded) |
  > |---------------|:---------------------------------------------|
