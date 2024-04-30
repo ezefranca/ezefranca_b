@@ -174,13 +174,43 @@ def fetch_weather_and_pollution(lat, lon):
         }
     return {}
 
+from datetime import datetime
+from TVTimeWrapper import TVTimeWrapper  # Assuming TVTimeWrapper is correctly imported
+
 def get_last_episode_info():
-   tvtime = TVTimeWrapper(TV_TIME_API_KEY, TV_TIME_API_SECRET)
-   episodes = tvtime.episode.watched(limit=1)
-   episode_data = episodes[0]
-   print(episodes)
-   last_episode_info = f"Last watched '{episode_data['show']['name']}' S{episode_data['season_number']}E{episode_data['number']} \"{episode_data['name']}\" via [TVTime](https://app.tvtime.com/user/4784821)}"
-   return last_episode_info
+    # Initialize the TVTime API wrapper
+    tvtime = TVTimeWrapper(TV_TIME_API_KEY, TV_TIME_API_SECRET)
+    
+    # Fetch the last watched episode
+    episodes = tvtime.episode.watched(limit=1)
+    if episodes:
+        episode_data = episodes[0]
+        
+        # Parse the date from the episode data
+        date_object = datetime.strptime(episode_data['seen_date'], '%Y-%m-%d %H:%M:%S')
+        formatted_date = date_object.strftime('%d/%m/%Y')
+        
+        # Format the episode info, including a link to the show on TVTime
+        show_name = episode_data['show']['name']
+        show_id = episode_data['show']['id']
+        season_number = episode_data['season_number']
+        episode_number = episode_data['number']
+        episode_name = episode_data['name']
+        
+        # Construct URL
+        show_url = f"https://www.tvtime.com/show/{show_id}"
+        
+        # Create markdown link for the show name
+        show_link = f"[{show_name}]({show_url})"
+        
+        # Format the final message
+        last_episode_info = (
+            f"Last watched {show_link} S{season_number}E{episode_number} \"{episode_name}\" on {formatted_date}"
+        )
+        return last_episode_info
+    else:
+        return f"No episodes watched recently, via [TVTime](https://app.tvtime.com/user/4784821)"
+
 
 def update_readme(posts, song, bio, weather_icon):
     day_name = datetime.datetime.now().strftime('%A')
