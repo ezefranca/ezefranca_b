@@ -202,7 +202,7 @@ def get_last_episode_info():
         
         # Format the final message
         last_episode_info = (
-            f"Last watched {show_link} S{season_number}E{episode_number} \"{episode_name}\" on {formatted_date}"
+            f"Last watched {show_link} S{season_number}E{episode_number} \"{episode_name}\" on {formatted_date} via [TVTime](https://app.tvtime.com/user/4784821)"
         )
         return last_episode_info
     else:
