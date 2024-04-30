@@ -236,7 +236,7 @@ def get_last_episode_info():
     if episodes:
         episode_data = episodes[0]
         date_object = datetime.datetime.strptime(episode_data['seen_date'], '%Y-%m-%d %H:%M:%S')
-        formatted_date = date_object.strftime('%d/%m/%Y')
+        formatted_date = date_object.strftime('%d %b %Y') 
         
         # Extract details about the episode
         show_name = episode_data['show']['name']
@@ -246,13 +246,13 @@ def get_last_episode_info():
         episode_name = episode_data['name']
         show_url = f"https://www.tvtime.com/show/{show_id}"
         show_link = f"[{show_name}]({show_url})"
-
+        
         last_episode_info = (
             f"📺 Recently watched {show_link} S{season_number}E{episode_number} \"{episode_name}\" on {formatted_date} via [TVTime](https://www.tvtime.com/user/4784821)."
         )
         return last_episode_info
     else:
-        return "📺 No episodes recently watched, via [TVTime](https://www.tvtime.com/user/4784821)."
+        return "📺 No recent episodes watched, via [TVTime](https://www.tvtime.com/user/4784821)."
 
 def update_readme():
     posts = get_last_posts()
