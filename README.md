@@ -1,10 +1,11 @@
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
-> - 🌡 The weather where I am is broken clouds, 14.38°C, humidity 91%.
+> - 🌡 The weather where I am is scattered clouds, 15.15°C, humidity 87%.
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
 > - 📚 Currently reading the book 'Thinking in SwiftUI by Eidhof, Chris'.
+> - 🎮 No recent games played.
 > - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 > > Most of the stuff on here is storage space.
 
