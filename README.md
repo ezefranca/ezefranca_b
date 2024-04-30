@@ -17,5 +17,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/df27954a78474015b4bf9e8a4eb2649f.jpg) | [Fortune Faded by Red Hot Chili Peppers - Greatest Hits](https://www.last.fm/music/Red+Hot+Chili+Peppers/_/Fortune+Faded) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/3d3d6d2b41544f42b8f750b6abdbd180.png) | [In My Place by Coldplay - A Rush of Blood to the Head](https://www.last.fm/music/Coldplay/_/In+My+Place) |
  > |---------------|:---------------------------------------------|
