@@ -45,7 +45,7 @@ def get_last_game_played(steam_id):
         raise ValueError("STEAM_API_KEY is not set in environment variables")
     steam = Steam(STEAM_API_KEY)
 
-    steam_id = get_steam_id("ezequielapp")
+    steam_id = get_steam_id("ezefranca")
     recent_games = steam.users.get_user_recently_played_games(steam_id)
     if recent_games and recent_games.get('games'):
         last_game = recent_games['games'][0]
@@ -55,13 +55,15 @@ def get_last_game_played(steam_id):
     return "No recent games played."
 
 def get_steam_id(username):
-    if not STEAM_API_KEY:
-        raise ValueError("STEAM_API_KEY is not set in environment variables")
-    steam = Steam(STEAM_API_KEY)
-    user_search = steam.users.search_user(username)
-    if user_search:
-        return user_search['players'][0]['steamid']
-    else:
+    try:
+        user_search = steam.users.search_user(username)
+        if user_search and 'players' in user_search and user_search['players']:
+            return user_search['players'][0]['steamid']
+        else:
+            print("No players found in the response or 'players' key missing.")
+            return None
+    except Exception as e:
+        print(f"An error occurred: {e}")
         return None
 
 def get_last_posts(limit=3):
