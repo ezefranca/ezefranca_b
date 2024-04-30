@@ -160,13 +160,15 @@ def update_readme(posts, song, bio):
         # Writing the last song listened section
         if song:
             file.write("> [!IMPORTANT]\n")
-            file.write("> > Last song listened.\n")
-            file.write("> > | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/84f0a16d520f435494d0ead313005e62.png) | [Carry On by Angra - Angels Cry](https://www.last.fm/music/Angra/_/Carry+On) | \n")
-            file.write("> > |---------------|:---------------------------------------------|")
+            file.write("> Last song listened.\n")
+            file.write(
+                f"> | ![Cover Image]({song['image']}) | [{song['name']} by {song['artist']} - {song['album']}]({song['url']}) |\n"
+                " > |---------------|:---------------------------------------------|\n"
+            )
 
 # Main execution
-posts = get_last_posts()
-song = get_last_song()
 book = get_last_book()
+song = get_last_song()
+posts = get_last_posts()
 bio = get_current_bio(book)
 update_readme(posts, song, bio)
