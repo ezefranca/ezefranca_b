@@ -1,6 +1,6 @@
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
-> - 🌡 The weather where I am is broken clouds, 13.62°C, humidity 84%.
+> - 🌡 The weather where I am is broken clouds, 13.67°C, humidity 85%.
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
@@ -17,5 +17,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/81eaded3977e15c717f1552c64bf757c.png) | [Plush (acoustic) by Stone Temple Pilots - Thank You](https://www.last.fm/music/Stone+Temple+Pilots/_/Plush+(acoustic)) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/a67ab6f2ddddc9de2d850b67a56f1058.jpg) | [Green Hill Zone by The Greatest Bits - Sonic the Hedgehog Classics](https://www.last.fm/music/The+Greatest+Bits/_/Green+Hill+Zone) |
  > |---------------|:---------------------------------------------|
