@@ -4,11 +4,14 @@ import datetime
 import os
 from bs4 import BeautifulSoup
 from steam_web_api import Steam
+from tvtimewrapper import TVTimeWrapper
 
 # Obtain API keys from environment variables
 LASTFM_API_KEY = os.getenv('LASTFM_API_KEY')
 OPEN_WEATHER_API = os.getenv('OPEN_WEATHER_API')
 STEAM_API_KEY = os.environ.get("STEAM_API_KEY")
+TV_TIME_API_KEY = os.environ.get("TV_TIME_API_KEY")
+TV_TIME_API_SECRET = os.environ.get("TV_TIME_API_SECRET")
 
 LATITUDE = 38.736567139281746
 LONGITUDE = -9.303651246619502
@@ -30,7 +33,9 @@ def get_current_bio(book="..."):
     weather_icon = f"<img src='{weather.get('icon_url', '')}' alt='weather-icon'>"
 
     last_game_info = get_last_game_played("76561198048997048")
+    last_episode_info = get_last_episode_info()
     linkedin_info = 'Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).'
+    
     bio_content = (
         f"> [!TIP]\n"
         f"> - 👋 **Hello!** Wishing you a wonderful {day_name} on this {date_str}.\n"
@@ -40,6 +45,7 @@ def get_current_bio(book="..."):
         f"> - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).\n"
         f"> - 📚 Currently reading '{book}'.\n"
         f"> - 🎮 {last_game_info}\n"
+        f"> - 📺 {last_episode_info}\n"
         f"> - ⚡ {linkedin_info}\n"
         f"> > Most of the stuff on here is storage space.\n\n"
     )
@@ -167,6 +173,14 @@ def fetch_weather_and_pollution(lat, lon):
             'icon_url': icon_url
         }
     return {}
+
+def get_last_episode_info():
+   tvtime = TVTimeWrapper(TV_TIME_API_KEY, TV_TIME_API_SECRET)
+   episodes = tvtime.episode.watched(limit=1)
+   episode_data = episodes[0]
+   print(episodes)
+   last_episode_info = f"Last watched '{episode_data['show']['name']}' S{episode_data['season_number']}E{episode_data['number']} \"{episode_data['name']}\" on {episode_data['seen_date'][:10]}"
+   return last_episode_info
 
 def update_readme(posts, song, bio, weather_icon):
     day_name = datetime.datetime.now().strftime('%A')
