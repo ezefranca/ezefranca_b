@@ -13,6 +13,8 @@ STEAM_API_KEY = os.environ.get("STEAM_API_KEY")
 LATITUDE = 38.736567139281746
 LONGITUDE = -9.303651246619502
 
+steam = Steam(STEAM_API_KEY)
+
 def get_current_bio(book="..."):
     
     current_date = datetime.datetime.now()
@@ -43,7 +45,6 @@ def get_last_game_played(steam_id):
     # Fetches the recently played games for the given Steam ID
     if not STEAM_API_KEY:
         raise ValueError("STEAM_API_KEY is not set in environment variables")
-    steam = Steam(STEAM_API_KEY)
 
     steam_id_updated = get_steam_id(steam_id)
     recent_games = steam.users.get_user_recently_played_games(steam_id_updated)
