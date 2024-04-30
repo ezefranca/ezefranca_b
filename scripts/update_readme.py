@@ -132,26 +132,61 @@ def get_last_book_info():
 
 def get_weather_emoji(weather_condition):
     emojis = {
-        'thunderstorm': '⛈',
-        'drizzle': '💧',
-        'rain': '☔️',
-        'snow': '❄️',
-        'mist': '🌫️',
-        'smoke': '🌫️',
-        'haze': '🌫️',
-        'dust': '🌫️',
-        'hot': '🔥',
-        'fog': '🌁',
-        'sand': '🌫️',
-        'ash': '🌫️',
-        'squall': '🌬️',
-        'tornado': '🌪️',
-        'clear': '☀️',
-        'clearSky': '☀️',
-        'clouds': '☁️',
-        'fewClouds': '⛅',
-        'atmosphere': '🌁',
-        'clouds': '☁️'
+        'thunderstorm with light rain': '⛈',  # 200
+        'thunderstorm with rain': '⛈',  # 201
+        'thunderstorm with heavy rain': '⛈',  # 202
+        'light thunderstorm': '⛈',  # 210
+        'thunderstorm': '⛈',  # 211
+        'heavy thunderstorm': '⛈',  # 212
+        'ragged thunderstorm': '⛈',  # 221
+        'thunderstorm with light drizzle': '⛈',  # 230
+        'thunderstorm with drizzle': '⛈',  # 231
+        'thunderstorm with heavy drizzle': '⛈',  # 232
+        'light intensity drizzle': '💧',  # 300
+        'drizzle': '💧',  # 301
+        'heavy intensity drizzle': '💧',  # 302
+        'light intensity drizzle rain': '💧',  # 310
+        'drizzle rain': '💧',  # 311
+        'heavy intensity drizzle rain': '💧',  # 312
+        'shower rain and drizzle': '💧',  # 313
+        'heavy shower rain and drizzle': '💧',  # 314
+        'shower drizzle': '💧',  # 321
+        'light rain': '☔️',  # 500
+        'moderate rain': '☔️',  # 501
+        'heavy intensity rain': '☔️',  # 502
+        'very heavy rain': '☔️',  # 503
+        'extreme rain': '☔️',  # 504
+        'freezing rain': '❄️',  # 511
+        'light intensity shower rain': '☔️',  # 520
+        'shower rain': '☔️',  # 521
+        'heavy intensity shower rain': '☔️',  # 522
+        'ragged shower rain': '☔️',  # 531
+        'light snow': '❄️',  # 600
+        'snow': '❄️',  # 601
+        'heavy snow': '❄️',  # 602
+        'sleet': '❄️',  # 611
+        'light shower sleet': '❄️',  # 612
+        'shower sleet': '❄️',  # 613
+        'light rain and snow': '❄️',  # 615
+        'rain and snow': '❄️',  # 616
+        'light shower snow': '❄️',  # 620
+        'shower snow': '❄️',  # 621
+        'heavy shower snow': '❄️',  # 622
+        'mist': '🌫️',  # 701
+        'smoke': '🌫️',  # 711
+        'haze': '🌫️',  # 721
+        'sand/dust whirls': '🌫️',  # 731
+        'fog': '🌫️',  # 741
+        'sand': '🌫️',  # 751
+        'dust': '🌫️',  # 761
+        'volcanic ash': '🌫️',  # 762
+        'squalls': '🌬️',  # 771
+        'tornado': '🌪️',  # 781
+        'clear sky': '☀️',  # 800
+        'few clouds': '⛅',  # 801
+        'scattered clouds': '☁️',  # 802
+        'broken clouds': '☁️',  # 803
+        'overcast clouds': '☁️',  # 804
     }
     return emojis.get(weather_condition.lower(), '🌡')
 
@@ -231,4 +266,4 @@ def update_readme():
             file.write(f">  - [{post['title']}]({post['link']})\n")
         file.write("\n")
 
-update_readme(posts, song)
+update_readme()
