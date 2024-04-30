@@ -3,10 +3,12 @@ import requests
 import datetime
 import os
 from bs4 import BeautifulSoup
+from steam_web_api import Steam
 
 # Obtain API keys from environment variables
 LASTFM_API_KEY = os.getenv('LASTFM_API_KEY')
 OPEN_WEATHER_API = os.getenv('OPEN_WEATHER_API')
+STEAM_API_KEY = os.environ.get("STEAM_API_KEY")
 
 LATITUDE = 38.736567139281746
 LONGITUDE = -9.303651246619502
@@ -20,6 +22,8 @@ def get_current_bio(book="..."):
     weather = fetch_weather_and_pollution(LATITUDE, LONGITUDE)
     weather_info = f"{weather.get('emoji', '')} The weather where I am is {weather.get('description', 'clear')}, {weather.get('temperature', 'N/A')}°C, humidity {weather.get('humidity', 'N/A')}%."
 
+    last_game_info = get_last_game_played("ezequielapp")
+    
     bio_content = (
         f"> [!TIP]\n"
         f"> - 👋 **Hello!** Wishing you a wonderful {day_name} on this {date_str}.\n"
@@ -28,11 +32,23 @@ def get_current_bio(book="..."):
         f"> - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).\n"
         f"> - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).\n"
         f"> - 📚 Currently reading the book '{book}'.\n"
+        f"> - 🎮 {last_game_info}\n"
         f"> - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).\n"
         f"> > Most of the stuff on here is storage space.\n\n"
     )
 
     return bio_content
+
+def get_last_game_played(steam_id):
+    # Fetches the recently played games for the given Steam ID
+    steam = Steam(STEAM_API_KEY)
+    recent_games = steam.users.get_user_recently_played_games(steam_id)
+    if recent_games and recent_games.get('games'):
+        last_game = recent_games['games'][0]
+        game_name = last_game['name']
+        last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
+        return f"Last played {game_name} on {last_played.strftime('%d %b %Y') on Steam}"
+    return "No recent games played."
 
 def get_last_posts(limit=3):
     rss_url = "http://ezefranca.com/feed.rss"
