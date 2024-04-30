@@ -15,49 +15,52 @@ TV_TIME_API_SECRET = os.environ.get("TV_TIME_API_SECRET")
 
 LATITUDE = 38.736567139281746
 LONGITUDE = -9.303651246619502
+STEAM_ID = 76561198048997048
 
 steam = Steam(STEAM_API_KEY)
 
-def get_current_bio(book="..."):
+def get_current_bio():
     
-    current_date = datetime.datetime.now()
-    day_name = current_date.strftime('%A')
-    date_str = current_date.strftime('%d of %B of %Y')
-
-    weather = fetch_weather_and_pollution(LATITUDE, LONGITUDE)
-    weather_info = (
-        f"{weather.get('emoji', '')} The weather here is {weather.get('description', '')}, "
-        f"{weather.get('temperature', 'N/A')}°C and humidity {weather.get('humidity', 'N/A')}%. "
-    )
-
-    weather_icon = f"<img src='{weather.get('icon_url', '')}' alt='weather-icon'>"
-
-    last_game_info = get_last_game_played("76561198048997048")
+    book_info = get_last_book_info()
+    day_info = get_day_info()
+    weather_info = fetch_weather_and_pollution_info()
+    last_game_info = get_last_game_played_info()
     last_episode_info = get_last_episode_info()
-    linkedin_info = 'Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).'
+    last_song_info = get_last_song_info()
+    linkedin_info = get_linkedin_info()
     
     bio_content = (
         f"> [!TIP]\n"
-        f"> - 👋 **Hello!** Wishing you a wonderful {day_name} on this {date_str}.\n"
+        f"> - 👋 {day_info}\n"
         f"> - {weather_info}\n"
         f"> - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.\n"
         f"> - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).\n"
         f"> - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).\n"
-        f"> - 📚 Currently reading '{book}'.\n"
+        f"> - 📚 {book_info}\n"
         f"> - 🎮 {last_game_info}\n"
         f"> - 📺 {last_episode_info}\n"
         f"> - ⚡ {linkedin_info}\n"
         f"> > Most of the stuff on here is storage space.\n\n"
     )
 
-    return (bio_content, weather_icon)
+    return bio_content
 
-def get_last_game_played(steam_id):
+def get_day_info():
+    current_date = datetime.datetime.now()
+    day_name = current_date.strftime('%A')
+    date_str = current_date.strftime('%d of %B of %Y')
+    return f"**Hello!** Wishing you a wonderful *{day_name}* on this {date_str}."
+
+def get_linkedin_info():
+    linkedin_info = 'Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).'
+    return linkedin_info
+    
+def get_last_game_played_info():
     # Fetches the recently played games for the given Steam ID
     if not STEAM_API_KEY:
         raise ValueError("STEAM_API_KEY is not set in environment variables")
 
-    recent_games = steam.users.get_user_recently_played_games(steam_id)
+    recent_games = steam.users.get_user_recently_played_games(STEAM_ID)
     if recent_games and recent_games.get('games'):
         last_game = recent_games['games'][0]
         game_name = last_game['name']
@@ -77,7 +80,7 @@ def get_last_posts(limit=3):
     posts = [{'title': entry.title, 'link': entry.link} for entry in feed.entries[:limit]]
     return posts
 
-def get_last_song():
+def get_last_song_info():
     url = f"http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=ezefranca&api_key={LASTFM_API_KEY}&format=json"
     response = requests.get(url)
     data = response.json()
@@ -89,17 +92,18 @@ def get_last_song():
         url = track['url']
         # Extract the medium size image
         image_url = next((img['#text'] for img in track['image'] if img['size'] == 'medium'), None)
-        return {
+        song = {
             "name": song_name,
             "artist": artist,
             "album": album_name,
             "url": url,
             "image": image_url
         }
+        last_song_info = f"{song['name']} by [{song['artist']} - {song['album']}]({song['url']})"
     else:
         return None
 
-def get_last_book():
+def get_last_book_info():
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:96.0) Gecko/20100101 Firefox/96.0',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
@@ -121,10 +125,10 @@ def get_last_book():
     if book_elements:
         title = book_elements[0].select_one('td.title a').text.strip()
         author = book_elements[0].select_one('td.author a').text.strip()
-        return f"{title} by {author}"
-  
+        book = f"{title} by {author}"
+        return f"Currently reading {book}"
     else:
-        return None
+        return "Nothing"
 
 def get_weather_emoji(weather_condition):
     emojis = {
@@ -151,8 +155,8 @@ def get_weather_emoji(weather_condition):
     }
     return emojis.get(weather_condition.lower(), '🌡')
 
-def fetch_weather_and_pollution(lat, lon):
-    weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPEN_WEATHER_API}&units=metric"
+def fetch_weather_and_pollution_info():
+    weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={LATITUDE}&lon={LONGITUDE}&appid={OPEN_WEATHER_API}&units=metric"
     weather_response = requests.get(weather_url)
     weather_data = weather_response.json() if weather_response.status_code == 200 else {}
 
@@ -165,13 +169,18 @@ def fetch_weather_and_pollution(lat, lon):
         icon_url = f"https://openweathermap.org/img/wn/{icon_code}@2x.png"
         emoji = get_weather_emoji(description)
 
-        return {
+        weather = {
             'emoji': emoji,
             'description': description,
             'temperature': temp,
             'humidity': humidity,
             'icon_url': icon_url
         }
+        weather_info = (
+            f"{weather.get('emoji', '')} The weather here is {weather.get('description', '')}, "
+            f"{weather.get('temperature', 'N/A')}°C and humidity {weather.get('humidity', 'N/A')}%. "
+        )
+        return weather_info
     return {}
 
 def get_last_episode_info():
@@ -209,33 +218,17 @@ def get_last_episode_info():
         return "No episodes watched recently, via [TVTime](https://www.tvtime.com/user/4784821)."
 
 
-def update_readme(posts, song, bio, weather_icon):
-    day_name = datetime.datetime.now().strftime('%A')
+def update_readme():
+    posts = get_last_posts()
+    bio = get_current_bio()
     with open('README.md', 'w') as file:
-        # Writing the greeting with the day name
-        file.write(f"{weather_icon}\n\n")
         if bio:
             file.write(f"{bio}\n")
-
         # Writing the blog posts section
         file.write("> [!NOTE]\n")
         file.write("> Last personal updates:\n")
         for post in posts:
             file.write(f">  - [{post['title']}]({post['link']})\n")
         file.write("\n")
-        
-        # Writing the last song listened section
-        if song:
-            file.write("> [!IMPORTANT]\n")
-            file.write("> Last song listened.\n")
-            file.write(
-                f"> | ![Cover Image]({song['image']}) | [{song['name']} by {song['artist']} - {song['album']}]({song['url']}) |\n"
-                " > |---------------|:---------------------------------------------|\n"
-            )
 
-# Main execution
-book = get_last_book()
-song = get_last_song()
-posts = get_last_posts()
-bio, icon = get_current_bio(book)
-update_readme(posts, song, bio, icon)
+update_readme(posts, song)
