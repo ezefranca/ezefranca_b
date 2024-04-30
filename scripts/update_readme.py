@@ -13,12 +13,8 @@ STEAM_API_KEY = os.environ.get("STEAM_API_KEY")
 TV_TIME_API_KEY = os.environ.get("TV_TIME_API_KEY")
 TV_TIME_API_SECRET = os.environ.get("TV_TIME_API_SECRET")
 
-LATITUDE = 38.736567139281746
-LONGITUDE = -9.303651246619502
-STEAM_ID = 76561198048997048
-
 def get_current_bio():
-
+    
     intro_info = get_intro_info()
     working_info = get_work_info()
     education_info = get_education_info()
@@ -48,13 +44,13 @@ def get_current_bio():
     return bio_content
 
 def get_intro_info():
-    return f"🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist"
+    return "🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist."
 
 def get_work_info():
-    return f"💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com)"
+    return "💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip)."
 
 def get_education_info():
-    return f"🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en)"
+    return "🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en)."
 
 def get_day_info():
     current_date = datetime.datetime.now()
@@ -63,27 +59,25 @@ def get_day_info():
     return f"👋 **Hello!** Wishing you a wonderful *{day_name}* on this {date_str}."
 
 def get_linkedin_info():
-    linkedin_info = f'⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).'
+    linkedin_info = "⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca)."
     return linkedin_info
     
 def get_last_game_played_info():
+    STEAM_ID = 76561198048997048
     steam = Steam(STEAM_API_KEY)
-    # Fetches the recently played games for the given Steam ID
     if not STEAM_API_KEY:
         raise ValueError("STEAM_API_KEY is not set in environment variables")
 
-    recent_games = steam.users.get_user_recently_played_games(STEAM_ID)
-    if recent_games and recent_games.get('games'):
+    recent_games = steam.get_user_recently_played_games(STEAM_ID)
+    if recent_games and recent_games['games']:
         last_game = recent_games['games'][0]
         game_name = last_game['name']
         last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
-        return f"🎮 Last played {game_name} on {last_played.strftime('%d %b %Y')} on [Steam](https://steamcommunity.com/id/ezequielapp)"
-    else: 
-        from time import strftime, localtime
-        userDetails = steam.users.get_user_details("76561198048997048")
-        timestamp = userDetails['player']['lastlogoff']
-        let = strftime('%d/%m/%Y', localtime(timestamp))
-        return f"🎮 No recent games played since {let} on [Steam](https://steamcommunity.com/id/ezequielapp)"
+        return f"🎮 Last played on [Steam](https://steamcommunity.com/id/ezequielapp) was {game_name} on {last_played.strftime('%d %b %Y')}."
+    else:
+        userDetails = steam.get_user_details(STEAM_ID)
+        last_logoff = datetime.datetime.fromtimestamp(userDetails['lastlogoff'])
+        return f"🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since {last_logoff.strftime('%d %b %Y')}."
 
 def get_last_posts(limit=3):
     rss_url = "http://ezefranca.com/feed.rss"
@@ -111,7 +105,7 @@ def get_last_song_info():
             "url": url,
             "image": image_url
         }
-        last_song_info = f"🎧 Last music was, {song['name']} by [{song['artist']} - {song['album']}]({song['url']})"
+        last_song_info = f"🎧 Latest music: {song['name']} by [{song['artist']} - {song['album']}]({song['url']}) via [LastFM](https://www.last.fm/user/ezefranca)"
         return last_song_info
     else:
         return "🎧 ..."
@@ -138,8 +132,8 @@ def get_last_book_info():
     if book_elements:
         title = book_elements[0].select_one('td.title a').text.strip()
         author = book_elements[0].select_one('td.author a').text.strip()
-        book = f"{title} by {author}"
-        return f"📚 Currently reading {book}"
+        book = f"**{title}** by *{author}*"
+        return f"📚 Reading: {book} via [GoodReads]()"
     else:
         return "📚 Currently reading nothing :("
 
@@ -204,6 +198,8 @@ def get_weather_emoji(weather_condition):
     return emojis.get(weather_condition.lower(), '🌡')
 
 def get_weather_and_pollution_info():
+    LATITUDE = 38.736567139281746
+    LONGITUDE = -9.303651246619502
     weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={LATITUDE}&lon={LONGITUDE}&appid={OPEN_WEATHER_API}&units=metric"
     weather_response = requests.get(weather_url)
     weather_data = weather_response.json() if weather_response.status_code == 200 else {}
@@ -250,11 +246,11 @@ def get_last_episode_info():
         show_link = f"[{show_name}]({show_url})"
 
         last_episode_info = (
-            f"📺 Last watched {show_link} S{season_number}E{episode_number} \"{episode_name}\" on {formatted_date} via [TVTime](https://www.tvtime.com/user/4784821)."
+            f"📺 Recently watched {show_link} S{season_number}E{episode_number} \"{episode_name}\" on {formatted_date} via [TVTime](https://www.tvtime.com/user/4784821)."
         )
         return last_episode_info
     else:
-        return "📺 No episodes watched recently, via [TVTime](https://www.tvtime.com/user/4784821)."
+        return "📺 No episodes recently watched, via [TVTime](https://www.tvtime.com/user/4784821)."
 
 def update_readme():
     posts = get_last_posts()
