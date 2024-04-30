@@ -32,7 +32,6 @@ def get_current_bio(book="..."):
     last_game_info = get_last_game_played("76561198048997048")
     linkedin_info = 'Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).'
     bio_content = (
-        f"{weather_icon}\n"
         f"> [!TIP]\n"
         f"> - 👋 **Hello!** Wishing you a wonderful {day_name} on this {date_str}.\n"
         f"> - {weather_info}\n"
@@ -45,7 +44,7 @@ def get_current_bio(book="..."):
         f"> > Most of the stuff on here is storage space.\n\n"
     )
 
-    return bio_content
+    return (bio_content, weather_icon)
 
 def get_last_game_played(steam_id):
     # Fetches the recently played games for the given Steam ID
@@ -169,10 +168,11 @@ def fetch_weather_and_pollution(lat, lon):
         }
     return {}
 
-def update_readme(posts, song, bio):
+def update_readme(posts, song, bio, weather_icon):
     day_name = datetime.datetime.now().strftime('%A')
     with open('README.md', 'w') as file:
         # Writing the greeting with the day name
+        file.write(f"{weather_icon}\n\n")
         if bio:
             file.write(f"{bio}\n")
 
@@ -196,5 +196,5 @@ def update_readme(posts, song, bio):
 book = get_last_book()
 song = get_last_song()
 posts = get_last_posts()
-bio = get_current_bio(book)
-update_readme(posts, song, bio)
+bio, icon = get_current_bio(book)
+update_readme(posts, song, bio, icon)
