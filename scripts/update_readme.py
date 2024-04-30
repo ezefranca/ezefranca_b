@@ -55,6 +55,9 @@ def get_last_game_played(steam_id):
     return "No recent games played."
 
 def get_steam_id(username):
+    if not STEAM_API_KEY:
+        raise ValueError("STEAM_API_KEY is not set in environment variables")
+    steam = Steam(STEAM_API_KEY)
     user_search = steam.users.search_user(username)
     if user_search:
         return user_search['players'][0]['steamid']
