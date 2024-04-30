@@ -22,7 +22,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install feedparser python-dateutil requests beautifulsoup4 cachetools
+          pip install feedparser python-dateutil requests beautifulsoup4 cachetools python-steam-api
           
       - name: Update README
         env:
