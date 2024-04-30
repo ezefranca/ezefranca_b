@@ -24,7 +24,7 @@ def get_current_bio(book="..."):
     weather = fetch_weather_and_pollution(LATITUDE, LONGITUDE)
     weather_info = f"{weather.get('emoji', '')} The weather where I am is {weather.get('description', 'clear')}, {weather.get('temperature', 'N/A')}°C, humidity {weather.get('humidity', 'N/A')}%."
 
-    last_game_info = get_last_game_played("ezequielapp")
+    last_game_info = get_last_game_played("76561198048997048")
     
     bio_content = (
         f"> [!TIP]\n"
@@ -46,26 +46,13 @@ def get_last_game_played(steam_id):
     if not STEAM_API_KEY:
         raise ValueError("STEAM_API_KEY is not set in environment variables")
 
-    steam_id_updated = get_steam_id(steam_id)
-    recent_games = steam.users.get_user_recently_played_games(steam_id_updated)
+    recent_games = steam.users.get_user_recently_played_games(steam_id)
     if recent_games and recent_games.get('games'):
         last_game = recent_games['games'][0]
         game_name = last_game['name']
         last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
         return f"Last played {game_name} on {last_played.strftime('%d %b %Y')} on Steam"
     return "No recent games played."
-
-def get_steam_id(username):
-    try:
-        user_search = steam.users.search_user(username)
-        if user_search and 'players' in user_search and user_search['players']:
-            return user_search['players'][0]['steamid']
-        else:
-            print("No players found in the response or 'players' key missing.")
-            return None
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return None
 
 def get_last_posts(limit=3):
     rss_url = "http://ezefranca.com/feed.rss"
