@@ -20,13 +20,13 @@ STEAM_ID = 76561198048997048
 steam = Steam(STEAM_API_KEY)
 
 def get_current_bio():
-    
+
+    last_song_info = get_last_song_info()
     last_book_info = get_last_book_info()
     day_info = get_day_info()
     weather_info = fetch_weather_and_pollution_info()
     last_game_info = get_last_game_played_info()
     last_episode_info = get_last_episode_info()
-    last_song_info = get_last_song_info()
     linkedin_info = get_linkedin_info()
     
     bio_content = (
@@ -101,8 +101,9 @@ def get_last_song_info():
             "image": image_url
         }
         last_song_info = f"{song['name']} by [{song['artist']} - {song['album']}]({song['url']})"
+        return last_song_info
     else:
-        return None
+        return "..."
 
 def get_last_book_info():
     headers = {
