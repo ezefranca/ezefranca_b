@@ -68,14 +68,14 @@ def get_last_game_played_info():
     if not STEAM_API_KEY:
         raise ValueError("STEAM_API_KEY is not set in environment variables")
 
-    recent_games = steam.get_user_recently_played_games(STEAM_ID)
+    recent_games = steam.users.get_user_recently_played_games(STEAM_ID)
     if recent_games and recent_games['games']:
         last_game = recent_games['games'][0]
         game_name = last_game['name']
         last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
         return f"🎮 Last played on [Steam](https://steamcommunity.com/id/ezequielapp) was {game_name} on {last_played.strftime('%d %b %Y')}."
     else:
-        userDetails = steam.get_user_details(STEAM_ID)
+        userDetails = steam.users.get_user_details(STEAM_ID)
         last_logoff = datetime.datetime.fromtimestamp(userDetails['lastlogoff'])
         return f"🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since {last_logoff.strftime('%d %b %Y')}."
 
