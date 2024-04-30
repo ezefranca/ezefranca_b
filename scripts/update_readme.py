@@ -41,7 +41,11 @@ def get_current_bio(book="..."):
 
 def get_last_game_played(steam_id):
     # Fetches the recently played games for the given Steam ID
+    if not STEAM_API_KEY:
+        raise ValueError("STEAM_API_KEY is not set in environment variables")
     steam = Steam(STEAM_API_KEY)
+
+    steam_id = get_steam_id("ezequielapp")
     recent_games = steam.users.get_user_recently_played_games(steam_id)
     if recent_games and recent_games.get('games'):
         last_game = recent_games['games'][0]
@@ -49,6 +53,13 @@ def get_last_game_played(steam_id):
         last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
         return f"Last played {game_name} on {last_played.strftime('%d %b %Y')} on Steam"
     return "No recent games played."
+
+def get_steam_id(username):
+    user_search = steam.users.search_user(username)
+    if user_search:
+        return user_search['players'][0]['steamid']
+    else:
+        return None
 
 def get_last_posts(limit=3):
     rss_url = "http://ezefranca.com/feed.rss"
