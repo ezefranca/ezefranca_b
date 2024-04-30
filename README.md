@@ -17,5 +17,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/058214bb0d994a25adb15f1194af6270.jpg) | [Cambia el mundo by Saurom - Vida](https://www.last.fm/music/Saurom/_/Cambia+el+mundo) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/e6605f39212f48d1b3968e78b5423456.png) | [By the Way by Red Hot Chili Peppers - By the Way](https://www.last.fm/music/Red+Hot+Chili+Peppers/_/By+the+Way) |
  > |---------------|:---------------------------------------------|
