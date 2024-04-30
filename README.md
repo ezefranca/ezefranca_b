@@ -1,6 +1,6 @@
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 30 of April of 2024.
-> - ☁️ The weather here is scattered clouds, 14.86°C and humidity 75%. 
+> - ☁️ The weather here is scattered clouds, 14.69°C and humidity 74%. 
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
