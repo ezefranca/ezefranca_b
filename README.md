@@ -2,7 +2,7 @@
 
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
-> - 🌡 The weather here is light rain, 16.72°C and humidity 82%. 
+> - 🌡 The weather here is light rain, 16.3°C and humidity 84%. 
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
@@ -21,5 +21,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/0a2681d8c06d351f9d4812af85e67da0.jpg) | [I Have a Right by Sonata Arctica - Acoustic Adventures, Vol. 2](https://www.last.fm/music/Sonata+Arctica/_/I+Have+a+Right) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/3d3d6d2b41544f42b8f750b6abdbd180.png) | [In My Place by Coldplay - A Rush of Blood to the Head](https://www.last.fm/music/Coldplay/_/In+My+Place) |
  > |---------------|:---------------------------------------------|
