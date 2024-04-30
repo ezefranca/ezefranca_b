@@ -16,6 +16,6 @@
 >  - [🥈 Tech for Good IADE 2024](https://ezefranca.com/news/tech-for-good-iade-2024)
 
 > [!IMPORTANT]
-> > Last song listened.
-> > | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/84f0a16d520f435494d0ead313005e62.png) | [Carry On by Angra - Angels Cry](https://www.last.fm/music/Angra/_/Carry+On) | 
-> > |---------------|:---------------------------------------------|
+> Last song listened.
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/20ba17ba677040bba9d65c548aa4cc5b.jpg) | [Faraway by Apocalyptica - Reflections Revised](https://www.last.fm/music/Apocalyptica/_/Faraway) |
+ > |---------------|:---------------------------------------------|
