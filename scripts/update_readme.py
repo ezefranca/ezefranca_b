@@ -21,7 +21,7 @@ steam = Steam(STEAM_API_KEY)
 
 def get_current_bio():
     
-    book_info = get_last_book_info()
+    last_book_info = get_last_book_info()
     day_info = get_day_info()
     weather_info = fetch_weather_and_pollution_info()
     last_game_info = get_last_game_played_info()
@@ -36,9 +36,10 @@ def get_current_bio():
         f"> - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.\n"
         f"> - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).\n"
         f"> - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).\n"
-        f"> - 📚 {book_info}\n"
+        f"> - 📚 {last_book_info}\n"
         f"> - 🎮 {last_game_info}\n"
         f"> - 📺 {last_episode_info}\n"
+        f"> - 🎧 {last_song_info}\n"
         f"> - ⚡ {linkedin_info}\n"
         f"> > Most of the stuff on here is storage space.\n\n"
     )
@@ -219,15 +220,11 @@ def fetch_weather_and_pollution_info():
     return {}
 
 def get_last_episode_info():
-    # Initialize the TVTime API wrapper
     tvtime = TVTimeWrapper(TV_TIME_API_KEY, TV_TIME_API_SECRET)
     
-    # Fetch the last watched episode
     episodes = tvtime.episode.watched(limit=1)
     if episodes:
         episode_data = episodes[0]
-        
-        # Parse the date from the episode data
         date_object = datetime.datetime.strptime(episode_data['seen_date'], '%Y-%m-%d %H:%M:%S')
         formatted_date = date_object.strftime('%d/%m/%Y')
         
@@ -237,14 +234,9 @@ def get_last_episode_info():
         season_number = episode_data['season_number']
         episode_number = episode_data['number']
         episode_name = episode_data['name']
-        
-        # Construct the URL for the show page on TVTime
         show_url = f"https://www.tvtime.com/show/{show_id}"
-        
-        # Create markdown link for the show name
         show_link = f"[{show_name}]({show_url})"
-        
-        # Format the final message including a hyperlink to the episode on TVTime
+
         last_episode_info = (
             f"Last watched {show_link} S{season_number}E{episode_number} \"{episode_name}\" on {formatted_date} via [TVTime](https://www.tvtime.com/user/4784821)."
         )
