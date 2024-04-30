@@ -69,7 +69,7 @@ def get_last_game_played_info():
         raise ValueError("STEAM_API_KEY is not set in environment variables")
 
     recent_games = steam.users.get_user_recently_played_games(STEAM_ID)
-    if recent_games and recent_games['games']:
+    if recent_games and recent_games.get('games'):
         last_game = recent_games['games'][0]
         game_name = last_game['name']
         last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
