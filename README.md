@@ -1,6 +1,6 @@
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
-> - 🌡 The weather where I am is few clouds, 12.97°C, humidity 79%.
+> - 🌡 The weather where I am is few clouds, 13.12°C, humidity 80%.
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
@@ -17,5 +17,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/995f97abbadd1a5e69a2967c72074867.jpg) | [Here Comes Your Man by Pixies - Doolittle](https://www.last.fm/music/Pixies/_/Here+Comes+Your+Man) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/75c1a001403f9ce50c44ba9a7ba78eab.jpg) | [Another One Bites the Dust by Queen - The Game (Deluxe Edition with Bonus Videos)](https://www.last.fm/music/Queen/_/Another+One+Bites+the+Dust) |
  > |---------------|:---------------------------------------------|
