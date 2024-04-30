@@ -1,8 +1,10 @@
 > [!TIP]
-> - 👋 **Hello!** Wishing you a wonderful Monday on this 29 of April of 2024.
+> - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
+> - 🌍 My current weather is clear, and the air quality is Good.
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
+> - 📚 Currently reading the book 'Thinking in SwiftUI by Eidhof, Chris'.
 > - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 > > Most of the stuff on here is storage space.
 
