@@ -174,9 +174,6 @@ def fetch_weather_and_pollution(lat, lon):
         }
     return {}
 
-from datetime import datetime
-from TVTimeWrapper import TVTimeWrapper  # Assuming TVTimeWrapper is correctly imported
-
 def get_last_episode_info():
     # Initialize the TVTime API wrapper
     tvtime = TVTimeWrapper(TV_TIME_API_KEY, TV_TIME_API_SECRET)
