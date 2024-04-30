@@ -30,6 +30,7 @@ jobs:
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           LASTFM_API_SECRET: ${{ secrets.LASTFM_API_SECRET }}
           OPEN_WEATHER_API: ${{ secrets.OPEN_WEATHER_API }}
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
         run: python scripts/update_readme.py
 
       - name: Commit and push if changed
