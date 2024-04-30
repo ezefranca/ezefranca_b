@@ -52,7 +52,12 @@ def get_last_game_played(steam_id):
         game_name = last_game['name']
         last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
         return f"Last played {game_name} on {last_played.strftime('%d %b %Y')} on Steam"
-    return "No recent games played."
+    else: 
+        from time import strftime, localtime
+        userDetails = steam.users.get_user_details("76561198048997048")
+        timestamp = userDetails['player']['lastlogoff']
+        let = strftime('%d/%m/%Y', localtime(timestamp))
+        return f"No recent games played since {let} on Steam"
 
 def get_last_posts(limit=3):
     rss_url = "http://ezefranca.com/feed.rss"
