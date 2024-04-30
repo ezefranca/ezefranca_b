@@ -1,6 +1,6 @@
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
-> - 🌡 The weather where I am is scattered clouds, 13.17°C, humidity 80%.
+> - 🌡 The weather where I am is scattered clouds, 13.1°C, humidity 81%.
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
@@ -17,5 +17,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/6d2341d52ba7a264e45275dd961243be.png) | [Paranoid by Weezer - Weezer (Teal Album)](https://www.last.fm/music/Weezer/_/Paranoid) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/da100086298745578da7df31a45be2f9.png) | [Doesn't Remind Me by Audioslave - Out of Exile](https://www.last.fm/music/Audioslave/_/Doesn%27t+Remind+Me) |
  > |---------------|:---------------------------------------------|
