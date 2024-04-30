@@ -184,29 +184,29 @@ def get_last_episode_info():
         episode_data = episodes[0]
         
         # Parse the date from the episode data
-        date_object = datetime.strptime(episode_data['seen_date'], '%Y-%m-%d %H:%M:%S')
+        date_object = datetime.datetime.strptime(episode_data['seen_date'], '%Y-%m-%d %H:%M:%S')
         formatted_date = date_object.strftime('%d/%m/%Y')
         
-        # Format the episode info, including a link to the show on TVTime
+        # Extract details about the episode
         show_name = episode_data['show']['name']
         show_id = episode_data['show']['id']
         season_number = episode_data['season_number']
         episode_number = episode_data['number']
         episode_name = episode_data['name']
         
-        # Construct URL
+        # Construct the URL for the show page on TVTime
         show_url = f"https://www.tvtime.com/show/{show_id}"
         
         # Create markdown link for the show name
         show_link = f"[{show_name}]({show_url})"
         
-        # Format the final message
+        # Format the final message including a hyperlink to the episode on TVTime
         last_episode_info = (
-            f"Last watched {show_link} S{season_number}E{episode_number} \"{episode_name}\" on {formatted_date} via [TVTime](https://app.tvtime.com/user/4784821)"
+            f"Last watched {show_link} S{season_number}E{episode_number} \"{episode_name}\" on {formatted_date} via [TVTime](https://www.tvtime.com/user/4784821)."
         )
         return last_episode_info
     else:
-        return f"No episodes watched recently, via [TVTime](https://app.tvtime.com/user/4784821)"
+        return "No episodes watched recently, via [TVTime](https://www.tvtime.com/user/4784821)."
 
 
 def update_readme(posts, song, bio, weather_icon):
