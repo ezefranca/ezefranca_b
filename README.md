@@ -1,7 +1,7 @@
-<img src='https://openweathermap.org/img/wn/03d@2x.png' alt='weather-icon'>
+<img src='https://openweathermap.org/img/wn/04d@2x.png' alt='weather-icon'>
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
-> - 🌡 The weather here is scattered clouds, 16.26°C and humidity 86%. 
+> - 🌡 The weather here is broken clouds, 16.77°C and humidity 83%. 
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
@@ -19,5 +19,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/8d1c5bb5472146b3aaf93c77c3a17989.png) | [Dude (Looks Like a Lady) by Aerosmith - Permanent Vacation](https://www.last.fm/music/Aerosmith/_/Dude+(Looks+Like+a+Lady)) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/3d359b955132742bc2fc3eacdff90b8c.jpg) | [Back in Black by AC/DC - Back in Black](https://www.last.fm/music/AC%2FDC/_/Back+in+Black) |
  > |---------------|:---------------------------------------------|
