@@ -17,5 +17,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/3d3d6d2b41544f42b8f750b6abdbd180.png) | [In My Place by Coldplay - A Rush of Blood to the Head](https://www.last.fm/music/Coldplay/_/In+My+Place) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/e6b38ee9858b906470ba6826825b9354.jpg) | [Creep by Radiohead - Pablo Honey](https://www.last.fm/music/Radiohead/_/Creep) |
  > |---------------|:---------------------------------------------|
