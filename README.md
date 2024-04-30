@@ -1,6 +1,6 @@
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
-> - 🌡 The weather where I am is broken clouds, 13.48°C, humidity 85%.
+> - 🌡 The weather where I am is broken clouds, 13.62°C, humidity 84%.
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
@@ -17,5 +17,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/6d2341d52ba7a264e45275dd961243be.png) | [Mr. Blue Sky by Weezer - Weezer (Teal Album)](https://www.last.fm/music/Weezer/_/Mr.+Blue+Sky) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/81eaded3977e15c717f1552c64bf757c.png) | [Plush (acoustic) by Stone Temple Pilots - Thank You](https://www.last.fm/music/Stone+Temple+Pilots/_/Plush+(acoustic)) |
  > |---------------|:---------------------------------------------|
