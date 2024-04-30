@@ -1,6 +1,6 @@
 > [!TIP]
 > - 👋 **Hello!** Wishing you a wonderful Tuesday on this 30 of April of 2024.
-> - 🌡 The weather where I am is light rain, 12.93°C, humidity 83%.
+> - 🌡 The weather where I am is light rain, 13.26°C, humidity 83%.
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).
 > - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).
@@ -17,5 +17,5 @@
 
 > [!IMPORTANT]
 > Last song listened.
-> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/e6b38ee9858b906470ba6826825b9354.jpg) | [Creep by Radiohead - Pablo Honey](https://www.last.fm/music/Radiohead/_/Creep) |
+> | ![Cover Image](https://lastfm.freetls.fastly.net/i/u/64s/95b912efa04c92d0f38cb79fe23962c9.jpg) | [Everything by Lifehouse - Greatest Hits](https://www.last.fm/music/Lifehouse/_/Everything) |
  > |---------------|:---------------------------------------------|
