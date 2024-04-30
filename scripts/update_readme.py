@@ -24,7 +24,7 @@ def get_current_bio(book="..."):
     weather = fetch_weather_and_pollution(LATITUDE, LONGITUDE)
     weather_info = f"{weather.get('emoji', '')} The weather where I am is {weather.get('description', 'clear')}, {weather.get('temperature', 'N/A')}°C, humidity {weather.get('humidity', 'N/A')}%."
 
-    last_game_info = get_last_game_played("ezefranca")
+    last_game_info = get_last_game_played("ezequielapp")
     
     bio_content = (
         f"> [!TIP]\n"
