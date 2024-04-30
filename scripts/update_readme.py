@@ -179,7 +179,7 @@ def get_last_episode_info():
    episodes = tvtime.episode.watched(limit=1)
    episode_data = episodes[0]
    print(episodes)
-   last_episode_info = f"Last watched '{episode_data['show']['name']}' S{episode_data['season_number']}E{episode_data['number']} \"{episode_data['name']}\" on {episode_data['seen_date'][:10]}"
+   last_episode_info = f"Last watched '{episode_data['show']['name']}' S{episode_data['season_number']}E{episode_data['number']} \"{episode_data['name']}\" via [TVTime](https://app.tvtime.com/user/4784821)}"
    return last_episode_info
 
 def update_readme(posts, song, bio, weather_icon):
