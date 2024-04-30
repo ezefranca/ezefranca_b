@@ -17,16 +17,13 @@ def get_current_bio(book="..."):
     day_name = current_date.strftime('%A')
     date_str = current_date.strftime('%d of %B of %Y')
 
-    data = fetch_weather_and_pollution(LATITUDE, LONGITUDE)
-    weather_description = data['weather'].get('weather', [{}])[0].get('description', 'clear')
-    pollution_index = data['pollution'].get('list', [{}])[0].get('main', {}).get('aqi', 1)
-
-    pollution_quality = ["Good", "Fair", "Moderate", "Poor", "Very Poor"][pollution_index - 1]
+    weather = fetch_weather_and_pollution(LATITUDE, LONGITUDE)
+    weather_info = f"{weather.get('emoji', '')} The weather where I am is {weather.get('description', 'clear')}, {weather.get('temperature', 'N/A')}°C, humidity {weather.get('humidity', 'N/A')}%."
 
     bio_content = (
         f"> [!TIP]\n"
         f"> - 👋 **Hello!** Wishing you a wonderful {day_name} on this {date_str}.\n"
-        f"> - 🌍 My current weather is {weather_description}, and the air quality is {pollution_quality}.\n"
+        f"> - {weather_info}\n"
         f"> - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.\n"
         f"> - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).\n"
         f"> - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).\n"
@@ -129,11 +126,22 @@ def fetch_weather_and_pollution(lat, lon):
     pollution_response = requests.get(pollution_url)
     pollution_data = pollution_response.json() if pollution_response.status_code == 200 else {}
 
-    data = {
-        'weather': weather_data,
-        'pollution': pollution_data
-    }
-    return data
+        # Prepare to extract main weather, temperature, and humidity
+    if 'weather' in weather_data and weather_data['weather']:
+        main_weather = weather_data['weather'][0]['main']
+        description = weather_data['weather'][0]['description']
+        temp = weather_data['main']['temp']
+        humidity = weather_data['main']['humidity']
+        emoji = get_weather_emoji(description)
+
+        # You can fetch pollution data similarly if needed here
+        return {
+            'emoji': emoji,
+            'description': description,
+            'temperature': temp,
+            'humidity': humidity
+        }
+    return {}
 
 def update_readme(posts, song, bio):
     day_name = datetime.datetime.now().strftime('%A')
