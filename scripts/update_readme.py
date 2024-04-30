@@ -22,10 +22,14 @@ def get_current_bio(book="..."):
     date_str = current_date.strftime('%d of %B of %Y')
 
     weather = fetch_weather_and_pollution(LATITUDE, LONGITUDE)
-    weather_info = f"{weather.get('emoji', '')} The weather where I am is {weather.get('description', 'clear')}, {weather.get('temperature', 'N/A')}°C, humidity {weather.get('humidity', 'N/A')}%."
+    weather_info = (
+        f"{weather.get('emoji', '')} The weather where I am is {weather.get('description', '')}, "
+        f"{weather.get('temperature', 'N/A')}°C, humidity {weather.get('humidity', 'N/A')}%. "
+        f"<img src='{weather.get('icon_url', '')}' alt='weather-icon'>"
+    )
 
     last_game_info = get_last_game_played("76561198048997048")
-    
+    linkedin_info = 'Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).'
     bio_content = (
         f"> [!TIP]\n"
         f"> - 👋 **Hello!** Wishing you a wonderful {day_name} on this {date_str}.\n"
@@ -33,9 +37,9 @@ def get_current_bio(book="..."):
         f"> - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.\n"
         f"> - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).\n"
         f"> - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).\n"
-        f"> - 📚 Currently reading the book '{book}'.\n"
+        f"> - 📚 Currently reading '{book}'.\n"
         f"> - 🎮 {last_game_info}\n"
-        f"> - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).\n"
+        f"> - ⚡ {linkedin_info}\n"
         f"> > Most of the stuff on here is storage space.\n\n"
     )
 
@@ -142,29 +146,24 @@ def get_weather_emoji(weather_condition):
 
 def fetch_weather_and_pollution(lat, lon):
     weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPEN_WEATHER_API}&units=metric"
-    pollution_url = f"https://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={OPEN_WEATHER_API}"
-    # Fetch weather data
     weather_response = requests.get(weather_url)
     weather_data = weather_response.json() if weather_response.status_code == 200 else {}
 
-    # Fetch pollution data
-    pollution_response = requests.get(pollution_url)
-    pollution_data = pollution_response.json() if pollution_response.status_code == 200 else {}
-
-        # Prepare to extract main weather, temperature, and humidity
     if 'weather' in weather_data and weather_data['weather']:
         main_weather = weather_data['weather'][0]['main']
         description = weather_data['weather'][0]['description']
         temp = weather_data['main']['temp']
         humidity = weather_data['main']['humidity']
+        icon_code = weather_data['weather'][0]['icon']
+        icon_url = f"https://openweathermap.org/img/wn/{icon_code}@2x.png"
         emoji = get_weather_emoji(description)
 
-        # You can fetch pollution data similarly if needed here
         return {
             'emoji': emoji,
             'description': description,
             'temperature': temp,
-            'humidity': humidity
+            'humidity': humidity,
+            'icon_url': icon_url
         }
     return {}
 
