@@ -3,20 +3,30 @@ import requests
 import datetime
 import os
 from bs4 import BeautifulSoup
-from datetime import datetime
-from cachetools import TTLCache
 
 # Obtain API keys from environment variables
 LASTFM_API_KEY = os.getenv('LASTFM_API_KEY')
+OPEN_WEATHER_API = os.getenv('OPEN_WEATHER_API')
 
-def get_current_bio(book="Not specified"):
+LATITUDE = 38.736567139281746
+LONGITUDE = -9.303651246619502
+
+def get_current_bio(book="..."):
+    
     current_date = datetime.datetime.now()
     day_name = current_date.strftime('%A')
     date_str = current_date.strftime('%d of %B of %Y')
 
+    data = fetch_weather_and_pollution(LATITUDE, LONGITUDE)
+    weather_description = data['weather'].get('weather', [{}])[0].get('description', 'clear')
+    pollution_index = data['pollution'].get('list', [{}])[0].get('main', {}).get('aqi', 1)
+
+    pollution_quality = ["Good", "Fair", "Moderate", "Poor", "Very Poor"][pollution_index - 1]
+
     bio_content = (
         f"> [!TIP]\n"
         f"> - 👋 **Hello!** Wishing you a wonderful {day_name} on this {date_str}.\n"
+        f"> - 🌍 My current weather is {weather_description}, and the air quality is {pollution_quality}.\n"
         f"> - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.\n"
         f"> - 💼 Currently, I'm a **Mobile Developer** at [Miniclip](https://www.miniclip.com).\n"
         f"> - 🎓 I'm also pursuing a **PhD** in Digital Games Development at [IADE](https://www.iade.pt/en).\n"
@@ -82,6 +92,48 @@ def get_last_book():
   
     else:
         return None
+
+def get_weather_emoji(weather_condition):
+    emojis = {
+        'thunderstorm': '⛈',
+        'drizzle': '💧',
+        'rain': '☔️',
+        'snow': '❄️',
+        'mist': '🌫️',
+        'smoke': '🌫️',
+        'haze': '🌫️',
+        'dust': '🌫️',
+        'hot': '🔥',
+        'fog': '🌁',
+        'sand': '🌫️',
+        'ash': '🌫️',
+        'squall': '🌬️',
+        'tornado': '🌪️',
+        'clear': '☀️',
+        'clearSky': '☀️',
+        'clouds': '☁️',
+        'fewClouds': '⛅',
+        'atmosphere': '🌁',
+        'clouds': '☁️'
+    }
+    return emojis.get(weather_condition.lower(), '🌡')
+
+def fetch_weather_and_pollution(lat, lon):
+    weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={OPEN_WEATHER_API}&units=metric"
+    pollution_url = f"https://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={OPEN_WEATHER_API}"
+    # Fetch weather data
+    weather_response = requests.get(weather_url)
+    weather_data = weather_response.json() if weather_response.status_code == 200 else {}
+
+    # Fetch pollution data
+    pollution_response = requests.get(pollution_url)
+    pollution_data = pollution_response.json() if pollution_response.status_code == 200 else {}
+
+    data = {
+        'weather': weather_data,
+        'pollution': pollution_data
+    }
+    return data
 
 def update_readme(posts, song, bio):
     day_name = datetime.datetime.now().strftime('%A')
