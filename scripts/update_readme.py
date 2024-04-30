@@ -47,7 +47,7 @@ def get_last_game_played(steam_id):
         last_game = recent_games['games'][0]
         game_name = last_game['name']
         last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
-        return f"Last played {game_name} on {last_played.strftime('%d %b %Y') on Steam}"
+        return f"Last played {game_name} on {last_played.strftime('%d %b %Y')} on Steam"
     return "No recent games played."
 
 def get_last_posts(limit=3):
