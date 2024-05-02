@@ -28,18 +28,17 @@ def get_current_bio():
     linkedin_info = get_linkedin_info()
     
     bio_content = (
-        f"> [!TIP]\n"
-        f"> - {day_info}\n"
-        f"> - {weather_info}\n"
-        f"> - {intro_info}\n"
-        f"> - {working_info}\n"
-        f"> - {education_info}\n"
-        f"> - {last_book_info}\n"
-        f"> - {last_game_info}\n"
-        f"> - {last_episode_info}\n"
-        f"> - {last_song_info}\n"
-        f"> - {linkedin_info}\n"
-        f"> > Most of the stuff on here is storage space.\n\n"
+        f"{day_info}\n"
+        f"{weather_info}\n"
+        f"{intro_info}\n"
+        f"{working_info}\n"
+        f"{education_info}\n"
+        f"{last_book_info}\n"
+        f"{last_game_info}\n"
+        f"{last_episode_info}\n"
+        f"{last_song_info}\n"
+        f"{linkedin_info}\n"
+        f"\n\n"
     )
 
     return bio_content
@@ -136,7 +135,7 @@ def get_last_book_info():
         title = book_elements[0].select_one('td.title a').text.strip()
         author = book_elements[0].select_one('td.author a').text.strip()
         book = f"**{title}** by *{author}*"
-        return f"📚 Reading: {book} via [GoodReads]()"
+        return f"📚 Reading: {book} via [GoodReads](https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos)"
     else:
         return "📚 Currently reading nothing :("
 
