@@ -266,5 +266,30 @@ def update_readme():
         for post in posts:
             file.write(f">  - [{post['title']}]({post['link']})\n")
         file.write("\n")
+            # Start with a basic HTML structure
+    
+    
+    html_content = '''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Now</title>
+    </head>
+    <body>
+    '''
+    with open('index.html', 'w') as file:
+        if bio:
+            html_content += f"<p>{bio}</p>\n"
+        html_content += "<div>Note: Last personal updates:</div>\n<ul>\n"
+        for post in posts:
+            html_content += f"    <li><a href='{post['link']}'>{post['title']}</a></li>\n"
+        html_content += "</ul>\n"
+        html_content += '''
+    </body>
+    </html>
+    '''
+        file.write(html_content)
 
 update_readme()
