@@ -28,16 +28,16 @@ def get_current_bio():
     linkedin_info = get_linkedin_info()
     
     bio_content = (
-        f"{day_info}\n"
-        f"{weather_info}\n"
-        f"{intro_info}\n"
-        f"{working_info}\n"
-        f"{education_info}\n"
-        f"{last_book_info}\n"
-        f"{last_game_info}\n"
-        f"{last_episode_info}\n"
-        f"{last_song_info}\n"
-        f"{linkedin_info}\n"
+        f"- {day_info}\n"
+        f"- {weather_info}\n"
+        f"- {intro_info}\n"
+        f"- {working_info}\n"
+        f"- {education_info}\n"
+        f"- {last_book_info}\n"
+        f"- {last_game_info}\n"
+        f"- {last_episode_info}\n"
+        f"- {last_song_info}\n"
+        f"- {linkedin_info}\n"
         f"\n\n"
     )
 
