@@ -1,12 +1,12 @@
 - 👋 **Hello!** Wishing you a wonderful *Thursday* on this 02 of May of 2024.
-- ⛅ The weather here is few clouds, 12.91°C and humidity 73%. 
+- ⛅ The weather here is few clouds, 12.89°C and humidity 73%. 
 - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 - 💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip).
 - 🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en).
 - 📚 Reading: **No bullshit guide to math and physics** by *Savov, Ivan* via [GoodReads](https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos)
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
-- 📺 Recently watched [Fallout](https://www.tvtime.com/show/416744) S1E2 "The Target" on 01 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
-- 🎧 Latest music: Se Chegou Assim by [Os Ipanemas - Os Ipanemas](https://www.last.fm/music/Os+Ipanemas/_/Se+Chegou+Assim) via [LastFM](https://www.last.fm/user/ezefranca)
+- 📺 Recently watched [The Big Door Prize](https://www.tvtime.com/show/403752) S2E2 "Visions" on 02 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
+- 🎧 Latest music: Saudade Me Fez Voltar by [Tião Carreiro e Pardinho - Sucessos de Ouro](https://www.last.fm/music/Ti%C3%A3o+Carreiro+e+Pardinho/_/Saudade+Me+Fez+Voltar) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
 
