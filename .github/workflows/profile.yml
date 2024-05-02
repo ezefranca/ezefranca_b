@@ -39,6 +39,6 @@ jobs:
         run: |
           git config --global user.email "ezequiel.ifsp@gmail.com"
           git config --global user.name "Ezequiel Santos"
-          git add README.md
+          git add .
           git commit -m "Updated README with latest blog posts and music" || exit 0
           git push
