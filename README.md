@@ -1,6 +1,6 @@
 > [!TIP]
-> - 👋 **Hello!** Wishing you a wonderful *Wednesday* on this 01 of May of 2024.
-> - ⛅ The weather here is few clouds, 11.65°C and humidity 76%. 
+> - 👋 **Hello!** Wishing you a wonderful *Thursday* on this 02 of May of 2024.
+> - ⛅ The weather here is few clouds, 11.45°C and humidity 75%. 
 > - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 > - 💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip).
 > - 🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en).
