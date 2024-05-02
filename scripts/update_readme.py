@@ -3,9 +3,11 @@ import requests
 import datetime
 import os
 import markdown
+import json
 from bs4 import BeautifulSoup
 from steam_web_api import Steam
 from tvtimewrapper import TVTimeWrapper
+from scholarly_publications.fetcher import fetch_all_publications
 
 # Obtain API keys from environment variables
 LASTFM_API_KEY = os.getenv('LASTFM_API_KEY')
@@ -274,5 +276,14 @@ def update_html():
       with open('index.html', 'w', encoding='utf-8') as f:
           f.write(html_content)
 
+def update_publications_json():
+    author_id = '6nOPl94AAAAJ'
+    publications = fetch_all_publications(author_id, sortby='pubdate')
+    with open('publications.json', 'w', encoding='utf-8') as f:
+        json.dump(publications, f, ensure_ascii=False, indent=4)
+
+
 update_readme()
 update_html()
+update_publications_json()
+
