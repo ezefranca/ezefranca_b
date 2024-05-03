@@ -289,7 +289,7 @@ def update_publications_json():
         json.dump(publications, f, ensure_ascii=False, indent=4)
 
 def get_last_issue():
-    if not github_token:
+    if not GITHUB_API_KEY:
         print("GitHub token not found in environment variables.")
         return
 
