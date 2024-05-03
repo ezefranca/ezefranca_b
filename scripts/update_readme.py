@@ -336,7 +336,7 @@ def get_last_issue():
 
 # Example usage
 text = get_last_issue()
-print(f"Last played game: {text]")
+print(f"Last played game: {text}")
 
 
 update_readme()
