@@ -217,16 +217,21 @@ def get_weather_and_pollution_info():
         icon_url = f"https://openweathermap.org/img/wn/{icon_code}@2x.png"
         emoji = get_weather_emoji(description)
 
+
+        rounded_temp_c = round(temp_celsius)
+        temp_fahrenheit = (temp_celsius * 9/5) + 32
+        rounded_temp_f = round(temp_fahrenheit)
+
         weather = {
             'emoji': emoji,
             'description': description,
-            'temperature': temp,
+            'temperature': rounded_temp_c,
             'humidity': humidity,
             'icon_url': icon_url
         }
         weather_info = (
             f"{weather.get('emoji', '')} The weather here is {weather.get('description', '')}, "
-            f"{weather.get('temperature', 'N/A')}°C and humidity {weather.get('humidity', 'N/A')}%. "
+            f"{weather.get('temperature', 'N/A')}°C ({rounded_temp_f}°F) and humidity {weather.get('humidity', 'N/A')}%."
         )
         return weather_info
     return {}
