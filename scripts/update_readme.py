@@ -10,6 +10,7 @@ from tvtimewrapper import TVTimeWrapper
 from scholarly_publications.fetcher import fetch_all_publications
 
 # Obtain API keys from environment variables
+GITHUB_API_KEY = os.getenv('GITHUB_TOKEN')
 LASTFM_API_KEY = os.getenv('LASTFM_API_KEY')
 OPEN_WEATHER_API = os.getenv('OPEN_WEATHER_API')
 STEAM_API_KEY = os.environ.get("STEAM_API_KEY")
@@ -286,6 +287,55 @@ def update_publications_json():
     publications = fetch_all_publications(author_id, sortby='pubdate')
     with open('publications.json', 'w', encoding='utf-8') as f:
         json.dump(publications, f, ensure_ascii=False, indent=4)
+
+def get_last_issue():
+    if not github_token:
+        print("GitHub token not found in environment variables.")
+        return
+
+    # GitHub API endpoint for issues
+    issues_url = f"https://api.github.com/repos/ezefranca/ns/issues"
+
+    # Make a GET request to GitHub API to fetch issues
+    response = requests.get(issues_url, headers={'Authorization': f'token {GITHUB_API_KEY}'})
+
+    if response.status_code != 200:
+        print(f"Failed to fetch issues. Status code: {response.status_code}")
+        return
+
+    issues = response.json()
+
+    if not issues:
+        print("No issues found.")
+        return
+
+    # Assuming the last issue contains the link to the text file
+    last_issue = issues[-1]
+
+    # Assuming the text file link is in the issue body
+    text_file_link = last_issue['body']
+
+    # Make a GET request to fetch the text file
+    response = requests.get(text_file_link)
+
+    if response.status_code != 200:
+        print(f"Failed to fetch text file. Status code: {response.status_code}")
+        return
+
+    # Parse the JSON from the text file
+    text_file_data = json.loads(response.text)
+
+    # Get the last played game details
+    last_played_game = text_file_data['items'][0]['playedApps'][0]
+
+    game_name = last_played_game['title']
+    play_date = last_played_game['firstPlayDate']
+
+    return game_name, play_date
+
+# Example usage
+game_name, play_date = get_last_issue()
+print(f"Last played game: {game_name}, Date: {play_date}")
 
 
 update_readme()
