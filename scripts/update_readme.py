@@ -317,25 +317,25 @@ def get_last_game_ns():
         return
 
     text_file_data = json.loads(response.text)
-    latest_game = ''
-    latest_date = ''
+    latest_game = None
+    latest_date = datetime.datetime.min
 
     # Check all records to find the most recent game played
     for record in text_file_data['items']:
         if record['playedApps'] and 'date' in record:
             record_date = datetime.datetime.strptime(record['date'], "%Y-%m-%d")
             if record_date > latest_date:
-                for app in record['playedApps']:
-                    latest_game = app
-                    latest_date = record_date
+                latest_game = record['playedApps'][0]
+                latest_date = record_date
 
     if latest_game:
         game_name = latest_game['title']
         play_date = latest_date
-        shop_uri = latest_game['shopUri']  
+        shop_uri = latest_game['shopUri']  # Assuming 'shopUri' exists in 'latest_game'
         return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date.strftime('%d %b %Y')}."
     
-    return f"🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)"
+    return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)"
+
 
 update_readme()
 update_html()
