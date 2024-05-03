@@ -27,6 +27,7 @@ def get_current_bio():
     day_info = get_day_info()
     weather_info = get_weather_and_pollution_info()
     last_game_info = get_last_game_played_info()
+    last_games_ns_info = get_last_game_ns()
     last_episode_info = get_last_episode_info()
     linkedin_info = get_linkedin_info()
     
@@ -38,6 +39,7 @@ def get_current_bio():
         f"- {education_info}\n"
         f"- {last_book_info}\n"
         f"- {last_game_info}\n"
+        f"- {last_games_ns_info}\n"
         f"- {last_episode_info}\n"
         f"- {last_song_info}\n"
         f"- {linkedin_info}\n"
@@ -288,15 +290,12 @@ def update_publications_json():
     with open('publications.json', 'w', encoding='utf-8') as f:
         json.dump(publications, f, ensure_ascii=False, indent=4)
 
-def get_last_issue():
+def get_last_game_ns():
     if not GITHUB_API_KEY:
         print("GitHub token not found in environment variables.")
         return
 
-    # GitHub API endpoint for issues
     issues_url = f"https://api.github.com/repos/ezefranca/ns/issues"
-
-    # Make a GET request to GitHub API to fetch issues
     response = requests.get(issues_url, headers={'Authorization': f'token {GITHUB_API_KEY}'})
 
     if response.status_code != 200:
@@ -309,35 +308,34 @@ def get_last_issue():
         print("No issues found.")
         return
 
-    # Assuming the last issue contains the link to the text file
     last_issue = issues[-1]
-
-    # Assuming the text file link is in the issue body
     text_file_link = last_issue['body']
-
-    # Make a GET request to fetch the text file
     response = requests.get(text_file_link)
 
     if response.status_code != 200:
         print(f"Failed to fetch text file. Status code: {response.status_code}")
         return
 
-    # Parse the JSON from the text file
     text_file_data = json.loads(response.text)
+    latest_game = None
+    latest_date = datetime.min
 
-    print(text_file_data)
-    # Get the last played game details
-    #last_played_game = text_file_data['items'][0]['playedApps'][0]
+    # Check all records to find the most recent game played
+    for record in text_file_data['items']:
+        if record['playedApps'] and 'date' in record:
+            record_date = datetime.strptime(record['date'], "%Y-%m-%d")
+            if record_date > latest_date:
+                for app in record['playedApps']:
+                    latest_game = app
+                    latest_date = record_date
 
-    #game_name = last_played_game['title']
-    #play_date = last_played_game['firstPlayDate']
-
-    return text_file_data#game_name, play_date
-
-# Example usage
-text = get_last_issue()
-print(f"Last played game: {text}")
-
+    if latest_game:
+        game_name = latest_game['title']
+        play_date = latest_date
+        shop_uri = latest_game['shopUri']  
+        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date.strftime('%d %b %Y')}."
+    
+    return f"🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)"
 
 update_readme()
 update_html()
