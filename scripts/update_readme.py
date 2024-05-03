@@ -10,7 +10,7 @@ from tvtimewrapper import TVTimeWrapper
 from scholarly_publications.fetcher import fetch_all_publications
 
 # Obtain API keys from environment variables
-GITHUB_API_KEY = os.getenv('GITHUB_TOKEN')
+GITHUB_API_KEY = os.getenv('GH_TOKEN')
 LASTFM_API_KEY = os.getenv('LASTFM_API_KEY')
 OPEN_WEATHER_API = os.getenv('OPEN_WEATHER_API')
 STEAM_API_KEY = os.environ.get("STEAM_API_KEY")
