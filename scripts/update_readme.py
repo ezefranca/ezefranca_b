@@ -317,8 +317,8 @@ def get_last_game_ns():
         return
 
     text_file_data = json.loads(response.text)
-    latest_game = None
-    latest_date = datetime.min
+    latest_game = ''
+    latest_date = ''
 
     # Check all records to find the most recent game played
     for record in text_file_data['items']:
