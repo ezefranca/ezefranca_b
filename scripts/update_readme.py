@@ -325,13 +325,14 @@ def get_last_issue():
     # Parse the JSON from the text file
     text_file_data = json.loads(response.text)
 
+    print(text_file_data)
     # Get the last played game details
-    last_played_game = text_file_data['items'][0]['playedApps'][0]
+    #last_played_game = text_file_data['items'][0]['playedApps'][0]
 
-    game_name = last_played_game['title']
-    play_date = last_played_game['firstPlayDate']
+    #game_name = last_played_game['title']
+    #play_date = last_played_game['firstPlayDate']
 
-    return game_name, play_date
+    return text_file_data#game_name, play_date
 
 # Example usage
 game_name, play_date = get_last_issue()
