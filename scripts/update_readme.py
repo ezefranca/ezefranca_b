@@ -218,8 +218,8 @@ def get_weather_and_pollution_info():
         emoji = get_weather_emoji(description)
 
 
-        rounded_temp_c = round(temp_celsius)
-        temp_fahrenheit = (temp_celsius * 9/5) + 32
+        rounded_temp_c = round(float(temp))
+        temp_fahrenheit = (float(temp) * 9/5) + 32
         rounded_temp_f = round(temp_fahrenheit)
 
         weather = {
