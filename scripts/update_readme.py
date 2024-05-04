@@ -253,8 +253,8 @@ def get_air_pollution():
         aqi = data['main']['aqi']
         components = data['components']
 
-        pollution_markdown = f"🔬 Air Quality: **AQI Level**: {aqi} "
-        pollution_markdown += "<details><summary><strong>Click to view pollutants</strong></summary><ul>"
+        pollution_markdown = f"<details>🔬 Air Quality: **AQI Level**: {aqi} "
+        pollution_markdown += "<summary><strong></strong></summary><ul>"
         for key, value in components.items():
             pollution_markdown += f"<li>{key.upper()}: {value} μg/m³</li>"
         pollution_markdown += "</ul></details>"
