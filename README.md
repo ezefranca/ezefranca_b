@@ -1,7 +1,7 @@
 - 👋 **Hello!** Wishing you a wonderful *Saturday* on this 04 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 - ☀️ The weather here is clear sky, 14°C (57°F) and humidity 87%.
-- <details>🔬 Air Quality: **AQI Level**: 2 <summary><strong></strong></summary><ul><li>CO: 200.27 μg/m³</li><li>NO: 0 μg/m³</li><li>NO2: 2.96 μg/m³</li><li>O3: 97.28 μg/m³</li><li>SO2: 1.7 μg/m³</li><li>PM2_5: 1.74 μg/m³</li><li>PM10: 5.59 μg/m³</li><li>NH3: 0.08 μg/m³</li></ul></details>
+- 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip).
 - 🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en).
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
