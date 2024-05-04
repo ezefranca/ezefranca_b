@@ -25,7 +25,8 @@ def get_current_bio():
     last_song_info = get_last_song_info()
     last_book_info = get_last_book_info()
     day_info = get_day_info()
-    weather_info = get_weather_and_pollution_info()
+    weather_info = get_weather_info()
+    air_quality_info = get_air_pollution()
     last_game_info = get_last_game_played_info()
     last_games_ns_info = get_last_game_ns()
     last_episode_info = get_last_episode_info()
@@ -34,8 +35,9 @@ def get_current_bio():
     
     bio_content = (
         f"- {day_info}\n"
-        f"- {weather_info}\n"
         f"- {intro_info}\n"
+        f"- {weather_info}\n"
+        f"- {air_quality_info}\n"
         f"- {working_info}\n"
         f"- {education_info}\n"
         f"- {presentation_info}\n"
@@ -206,7 +208,7 @@ def get_weather_emoji(weather_condition):
     }
     return emojis.get(weather_condition.lower(), '🌡')
 
-def get_weather_and_pollution_info():
+def get_weather_info():
     LATITUDE = 38.736567139281746
     LONGITUDE = -9.303651246619502
     weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={LATITUDE}&lon={LONGITUDE}&appid={OPEN_WEATHER_API}&units=metric"
@@ -240,6 +242,29 @@ def get_weather_and_pollution_info():
         )
         return weather_info
     return {}
+
+def get_air_pollution():
+    LATITUDE = 38.736567139281746
+    LONGITUDE = -9.303651246619502
+    pollution_url = f"https://api.openweathermap.org/data/2.5/air_pollution?lat={LATITUDE}&lon={LONGITUDE}&appid={OPEN_WEATHER_API}"
+    response = requests.get(pollution_url)
+    if response.status_code == 200:
+        data = response.json()['list'][0]
+        aqi = data['main']['aqi']
+        components = data['components']
+
+        pollution_markdown = f"🔬 Air Quality: **AQI Level**: {aqi}"
+        pollution_markdown += "- **Pollutants**: "
+        for key, value in components.items():
+            pollution_markdown += f"({key.upper()}: {value} μg/m³)"
+
+        return pollution_markdown
+    else:
+        return "Failed to retrieve air pollution data."
+
+# Example usage
+print(get_air_pollution(latitude, longitude, api_key))
+
 
 def get_last_episode_info():
     tvtime = TVTimeWrapper(TV_TIME_API_KEY, TV_TIME_API_SECRET)
