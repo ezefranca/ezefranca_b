@@ -30,6 +30,7 @@ def get_current_bio():
     last_games_ns_info = get_last_game_ns()
     last_episode_info = get_last_episode_info()
     linkedin_info = get_linkedin_info()
+    presentation_info = get_last_presentation()
     
     bio_content = (
         f"- {day_info}\n"
@@ -37,6 +38,7 @@ def get_current_bio():
         f"- {intro_info}\n"
         f"- {working_info}\n"
         f"- {education_info}\n"
+        f"- {presentation_info}\n"
         f"- {last_book_info}\n"
         f"- {last_game_info}\n"
         f"- {last_games_ns_info}\n"
@@ -336,6 +338,31 @@ def get_last_game_ns():
     
     return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)"
 
+def get_last_presentation():
+    url = "https://speakerdeck.com/ezefranca"
+    response = requests.get(url)
+    if response.status_code != 200:
+        print("Failed to retrieve the page")
+        return None
+    soup = BeautifulSoup(response.text, 'html.parser')
+    cards = soup.find_all('div', class_='card deck-preview')
+
+    if cards:
+        last_presentation = cards[0]
+        presentation_link = last_presentation.find('a', class_='deck-preview-link')['href']
+        presentation_title = last_presentation.find('div', class_='deck-title').text.strip()
+        last_presentation = {
+            'title': presentation_title,
+            'link': f"https://speakerdeck.com{presentation_link}"
+        }
+        if last_presentation:
+            title = last_presentation['title']
+            link = last_presentation['link']
+            return f"💻 Last uploaded deck was [{title}]({link})"
+        else:
+            return "💻 No recent presentations found on [Speakerdeck](https://speakerdeck.com/ezefranca)"
+    else:
+        return "💻 No recent presentations found on [Speakerdeck](https://speakerdeck.com/ezefranca)"
 
 update_readme()
 update_html()
