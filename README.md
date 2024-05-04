@@ -1,5 +1,5 @@
 - 👋 **Hello!** Wishing you a wonderful *Saturday* on this 04 of May of 2024.
-- ☀️ The weather here is clear sky, 14°C (57°F) and humidity 86%.
+- ☀️ The weather here is clear sky, 14°C (57°F) and humidity 87%.
 - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 - 💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip).
 - 🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en).
