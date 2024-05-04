@@ -254,10 +254,11 @@ def get_air_pollution():
         components = data['components']
 
         pollution_markdown = f"🔬 Air Quality: **AQI Level**: {aqi}"
-        pollution_markdown += "- **Pollutants**: "
+        pollution_markdown += "<details> <summary>**Pollutants**</summary> "
         for key, value in components.items():
             pollution_markdown += f"({key.upper()}: {value} μg/m³)"
 
+        pollution_markdown += "</details>"
         return pollution_markdown
     else:
         return "Failed to retrieve air pollution data."
