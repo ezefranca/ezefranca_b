@@ -262,9 +262,6 @@ def get_air_pollution():
     else:
         return "Failed to retrieve air pollution data."
 
-# Example usage
-print(get_air_pollution(latitude, longitude, api_key))
-
 
 def get_last_episode_info():
     tvtime = TVTimeWrapper(TV_TIME_API_KEY, TV_TIME_API_SECRET)
