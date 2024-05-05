@@ -1,4 +1,4 @@
-- 👋 **Hello!** Wishing you a wonderful *Saturday* on this 04 of May of 2024.
+- 👋 **Hello!** Wishing you a wonderful *Sunday* on this 05 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
 - ☁️ The weather here is broken clouds, 16°C (61°F) and humidity 94%.
 - 🔬 Air Quality here, **AQI Level**: 2
