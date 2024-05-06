@@ -344,7 +344,7 @@ def get_last_game_ns():
     for record in text_file_data['items']:
         for app in record.get('playedApps', []):
             if 'firstPlayDate' in app:
-                record_date = datetime.strptime(app['firstPlayDate'], "%Y-%m-%d")
+                record_date = datetime.datetime.strptime(app['firstPlayDate'], "%Y-%m-%d")
                 if record_date > latest_date:
                     latest_game = app
                     latest_date = record_date
