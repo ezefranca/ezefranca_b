@@ -354,14 +354,12 @@ def get_last_game_ns():
     latest_game_title = latest_game['title'] if latest_game else None
     latest_game_shop_uri = latest_game['shopUri'] if latest_game else None
     latest_game_date = latest_date.strftime('%d %b %Y') if latest_game else None
-
-   if latest_game:
-    play_date = latest_date.strftime('%d %b %Y')  
+    
+    if latest_game:
+        play_date = latest_date.strftime('%d %b %Y')  
         return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{latest_game_title}]({latest_game_shop_uri}) on {play_date}."
     else:
         return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
-
-
 
 def get_last_presentation():
     url = "https://speakerdeck.com/ezefranca"
