@@ -309,8 +309,14 @@ def update_publications_json():
     publications = fetch_all_publications(author_id, sortby='pubdate')
     with open('publications.json', 'w', encoding='utf-8') as f:
         json.dump(publications, f, ensure_ascii=False, indent=4)
-        
-        
+
+def parse_date(date_str):
+    try:
+        return datetime.datetime.strptime(date_str, "%Y-%m-%d")
+    except ValueError as e:
+        print(f"Error parsing date: {e}")
+        return None
+         
 def parse_timestamp(ts):
     try:
         return datetime.datetime.fromtimestamp(ts)
@@ -346,26 +352,38 @@ def get_last_game_ns():
 
     json_data = json.loads(response.text)
 
-    last_played = None
-    latest_time = None
-    shop_uri = None
-    
     for item in json_data['items']:
-        last_played_at = item.get('lastPlayedAt')
-        if last_played_at:
-            # Convert the timestamp to datetime for comparison
-            last_played_at_datetime = parse_timestamp(last_played_at)
-            if last_played_at_datetime and (not latest_time or last_played_at_datetime < latest_time):
-                latest_time = last_played_at_datetime
-                last_played = item
+        item_date = parse_date(item['date'])
+        if item_date and (not latest_date or item_date > latest_date):
+            latest_date = item_date
+            games_on_latest_date = [item]
+        elif item_date == latest_date:
+            games_on_latest_date.append(item)
 
-    if last_played:
-        print(last_played)
-        last_played_game = last_played #['title']
-        shop_uri = ''
-        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{last_played_game}]({shop_uri}) on {latest_time.strftime('%Y-%m-%d')}."
+    # Second pass: From the most recent date, find the game with the latest 'lastPlayedAt'
+    last_played_game = None
+    latest_time = None
+    game_name = "Unknown Game"
+    shop_uri = "https://shop.example.com"  # Default shop URI
+
+    for game in games_on_latest_date:
+        last_played_at = game.get('lastPlayedAt')
+        if last_played_at:
+            last_played_at_datetime = parse_timestamp(last_played_at)
+            if last_played_at_datetime and (not latest_time or last_played_at_datetime > latest_time):
+                latest_time = last_played_at_datetime
+                last_played_game = game
+                # Assuming the first application in the first observation is the game played
+                if game['observations'] and game['observations'][0]['applications']:
+                    app_info = game['observations'][0]['applications'][0]
+                    game_name = app_info['title']
+                    shop_uri = app_info['shopUri']  # Extract shop URI from the JSON
+
+    if last_played_game:
+        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {latest_time.strftime('%Y-%m-%d')}."
     else:
         return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
+
     
     # last_played_game = None
     # last_played_date = datetime.datetime.min
