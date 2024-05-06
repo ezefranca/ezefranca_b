@@ -335,9 +335,9 @@ def get_last_game_ns():
     if response.status_code != 200:
         print(f"Failed to fetch text file. Status code: {response.status_code}")
         return
-
+    
     text_file_data = json.loads(response.text)
-    latest_game = ''
+    latest_game = None
     latest_date = datetime.datetime.min
 
     # Check all records to find the most recent game played
@@ -345,9 +345,11 @@ def get_last_game_ns():
         for app in record.get('playedApps', []):
             if 'firstPlayDate' in app:
                 record_date = datetime.datetime.strptime(app['firstPlayDate'], "%Y-%m-%d")
+                print(f"Checking app: {app['title']} with date: {record_date}")  # Debug print
                 if record_date > latest_date:
                     latest_game = app
                     latest_date = record_date
+                    print(f"New latest game found: {app['title']} on {record_date}")  # Debug print
 
     if latest_game:
         game_name = latest_game['title']
@@ -356,6 +358,7 @@ def get_last_game_ns():
         return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date.strftime('%d %b %Y')}."
     else:
         return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
+
 
 def get_last_presentation():
     url = "https://speakerdeck.com/ezefranca"
