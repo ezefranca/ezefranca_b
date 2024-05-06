@@ -336,25 +336,26 @@ def get_last_game_ns():
         print(f"Failed to fetch text file. Status code: {response.status_code}")
         return
 
-    text_file_data = json.loads(response.text)
+    text_file_data = json.loads(json.dumps(response))
     latest_game = None
     latest_date = datetime.datetime.min
 
     # Check all records to find the most recent game played
     for record in text_file_data['items']:
-        if record['playedApps'] and 'date' in record:
-            record_date = datetime.datetime.strptime(record['date'], "%Y-%m-%d")
-            if record_date > latest_date:
-                latest_game = record['playedApps'][0]
-                latest_date = record_date
+        for app in record.get('playedApps', []):
+            if 'firstPlayDate' in app:
+                record_date = datetime.strptime(app['firstPlayDate'], "%Y-%m-%d")
+                if record_date > latest_date:
+                    latest_game = app
+                    latest_date = record_date
 
     if latest_game:
         game_name = latest_game['title']
         play_date = latest_date
-        shop_uri = latest_game['shopUri']  # Assuming 'shopUri' exists in 'latest_game'
+        shop_uri = latest_game['shopUri']
         return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date.strftime('%d %b %Y')}."
-    
-    return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)"
+    else:
+        return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
 
 def get_last_presentation():
     url = "https://speakerdeck.com/ezefranca"
