@@ -351,7 +351,8 @@ def get_last_game_ns():
 
     latest_game_title = latest_game['title'] if latest_game else None
     latest_game_shop_uri = latest_game['shopUri'] if latest_game else None
-    latest_game_date = latest_date.strftime('%d %b %Y') if latest_game else None
+    latest_date_str = datetime.datetime.strptime(latest_date, '%Y-%m-%d %H:%M:%S.%f')
+    latest_game_date = latest_date_str.strftime('%d %b %Y') if latest_game else None
 
     if latest_game:
         return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{latest_game_title}]({latest_game_shop_uri}) on {latest_game_date.strftime('%d %b %Y')}."
