@@ -352,30 +352,31 @@ def get_last_game_ns():
 
     json_data = json.loads(response.text)
 
+    # Re-analyzing the data with corrected datetime import
     last_played_game = None
     latest_time = None
 
     # Iterate over each item to find the latest 'lastPlayedAt'
-    for item in json_data['items']:
+    for item in data['items']:
         last_played_at = item.get('lastPlayedAt')
         if last_played_at:
-            last_played_at_datetime = parse_timestamp(last_played_at)
+            last_played_at_datetime = datetime.fromtimestamp(last_played_at)
             if not latest_time or last_played_at_datetime > latest_time:
                 latest_time = last_played_at_datetime
                 last_played_game = item
-
-    if last_played_game:
-        # Retrieve game details from 'playedApps'
-        if last_played_game['playedApps']:
-            game = last_played_game['playedApps'][0]
-            game_name = game['title']
-            shop_uri = game['shopUri']
-            play_date = latest_time.strftime('%Y-%m-%d')
-            return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date}."
-        else:
-            return "🕹️ Last played game details are not available."
+    last_game_info = ''
+    # Extract game details if the last played game was found
+    if last_played_game and last_played_game['playedApps']:
+        game = last_played_game['playedApps'][0]
+        game_name = game['title']
+        shop_uri = game['shopUri']
+        play_date = latest_time.strftime('%Y-%m-%d')
+        last_game_info = f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date}."
     else:
-        return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
+        last_game_info = "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
+
+    return last_game_info
+
 
 def get_last_presentation():
     url = "https://speakerdeck.com/ezefranca"
