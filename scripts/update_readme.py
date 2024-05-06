@@ -346,7 +346,7 @@ def get_last_game_ns():
         if 'playedApps' in item:
             for game in item['playedApps']:
                 if 'firstPlayDate' in game:
-                    first_play_date = datetime.fromisoformat(game['firstPlayDate'])
+                    first_play_date = datetime.datetime.fromisoformat(game['firstPlayDate'])
                     if first_play_date > last_played_date:
                         last_played_game = game['title']
                         last_played_date = first_play_date
