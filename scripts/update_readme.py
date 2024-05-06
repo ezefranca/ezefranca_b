@@ -309,8 +309,9 @@ def update_publications_json():
     publications = fetch_all_publications(author_id, sortby='pubdate')
     with open('publications.json', 'w', encoding='utf-8') as f:
         json.dump(publications, f, ensure_ascii=False, indent=4)
-
- def parse_timestamp(ts):
+        
+        
+def parse_timestamp(ts):
     try:
         return datetime.datetime.fromtimestamp(ts)
     except Exception as e:
