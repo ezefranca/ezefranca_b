@@ -335,27 +335,26 @@ def get_last_game_ns():
     if response.status_code != 200:
         print(f"Failed to fetch text file. Status code: {response.status_code}")
         return
-    
-    text_file_data = json.loads(response.text)
-    latest_game = None
-    latest_date = datetime.datetime.min
 
-    # Check all records to find the most recent game played
-    for record in text_file_data['items']:
-        for app in record.get('playedApps', []):
-            if 'firstPlayDate' in app:
-                record_date = datetime.datetime.strptime(app['firstPlayDate'], "%Y-%m-%d")
-                print(f"Checking app: {app['title']} with date: {record_date}")  # Debug print
-                if record_date > latest_date:
-                    latest_game = app
-                    latest_date = record_date
-                    print(f"New latest game found: {app['title']} on {record_date}")  # Debug print
+    json_data = json.loads(response.text)
+    
+    latest_game = None
+    latest_date = datetime.min
+
+    for record in json_data['items']:
+    for app in record.get('playedApps', []):
+        if 'firstPlayDate' in app:
+            record_date = datetime.datetime.strptime(app['firstPlayDate'], "%Y-%m-%d")
+            if record_date > latest_date:
+                latest_game = app
+                latest_date = record_date
+
+    latest_game_title = latest_game['title'] if latest_game else None
+    latest_game_shop_uri = latest_game['shopUri'] if latest_game else None
+    latest_game_date = latest_date.strftime('%d %b %Y') if latest_game else None
 
     if latest_game:
-        game_name = latest_game['title']
-        play_date = latest_date
-        shop_uri = latest_game['shopUri']
-        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date.strftime('%d %b %Y')}."
+        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{latest_game_title}]({latest_game_shop_uri}) on {latest_game_date.strftime('%d %b %Y')}."
     else:
         return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
 
