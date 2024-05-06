@@ -341,13 +341,13 @@ def get_last_game_ns():
     latest_game = None
     latest_date = datetime.datetime.min
 
-    for record in json_data['items']:
-        for app in record.get('playedApps', []):
-            if 'firstPlayDate' in app:
-                record_date = datetime.datetime.strptime(app['firstPlayDate'], "%Y-%m-%d")
-                if record_date > latest_date:
-                    latest_game = app
-                    latest_date = record_date
+    latest_item = max(json_data['items'], key=lambda x: x['lastPlayedAt'], default=None)
+    for app in latest_item.get('playedApps', []):
+        if 'firstPlayDate' in app:
+            record_date = datetime.datetime.strptime(app['firstPlayDate'], "%Y-%m-%d")
+            if record_date > latest_date:
+                latest_game = app
+                latest_date = record_date
 
     if latest_game:
         game_name = latest_game['title']
