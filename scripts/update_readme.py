@@ -386,6 +386,29 @@ def get_last_presentation():
     else:
         return "💻 No recent presentations found on [Speakerdeck](https://speakerdeck.com/ezefranca)"
 
+def get_location():
+    if not GITHUB_API_KEY:
+        print("GitHub token not found in environment variables.")
+        return
+
+    issues_url = f"https://api.github.com/repos/ezefranca/location/issues"
+    response = requests.get(issues_url, headers={'Authorization': f'token {GITHUB_API_KEY}'})
+
+    if response.status_code != 200:
+        print(f"Failed to fetch issues. Status code: {response.status_code}")
+        return
+
+    issues = response.json()
+
+    if not issues:
+        print("No issues found.")
+        return
+
+    last_issue = issues[-1]
+    location_data = last_issue['body']
+    print(location_data)
+
+get_location()
 update_readme()
 update_html()
 update_publications_json()
