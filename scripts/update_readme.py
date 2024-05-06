@@ -357,10 +357,10 @@ def get_last_game_ns():
     latest_time = None
 
     # Iterate over each item to find the latest 'lastPlayedAt'
-    for item in data['items']:
+    for item in json_data['items']:
         last_played_at = item.get('lastPlayedAt')
         if last_played_at:
-            last_played_at_datetime = datetime.fromtimestamp(last_played_at)
+            last_played_at_datetime = datetime.datetime.fromtimestamp(last_played_at)
             if not latest_time or last_played_at_datetime > latest_time:
                 latest_time = last_played_at_datetime
                 last_played_game = item
