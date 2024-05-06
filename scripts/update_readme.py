@@ -17,7 +17,7 @@ STEAM_API_KEY = os.environ.get("STEAM_API_KEY")
 TV_TIME_API_KEY = os.environ.get("TV_TIME_API_KEY")
 TV_TIME_API_SECRET = os.environ.get("TV_TIME_API_SECRET")
 
-def get_current_bio():
+def get_current_bio(lat, long):
     
     intro_info = get_intro_info()
     working_info = get_work_info()
@@ -25,8 +25,8 @@ def get_current_bio():
     last_song_info = get_last_song_info()
     last_book_info = get_last_book_info()
     day_info = get_day_info()
-    weather_info = get_weather_info()
-    air_quality_info = get_air_pollution()
+    weather_info = get_weather_info(lat, long)
+    air_quality_info = get_air_pollution(lat, long)
     last_game_info = get_last_game_played_info()
     last_games_ns_info = get_last_game_ns()
     last_episode_info = get_last_episode_info()
@@ -208,9 +208,9 @@ def get_weather_emoji(weather_condition):
     }
     return emojis.get(weather_condition.lower(), '🌡')
 
-def get_weather_info():
-    LATITUDE = 38.736567139281746
-    LONGITUDE = -9.303651246619502
+def get_weather_info(lat, long):
+    LATITUDE = lat
+    LONGITUDE = long
     weather_url = f"https://api.openweathermap.org/data/2.5/weather?lat={LATITUDE}&lon={LONGITUDE}&appid={OPEN_WEATHER_API}&units=metric"
     weather_response = requests.get(weather_url)
     weather_data = weather_response.json() if weather_response.status_code == 200 else {}
@@ -243,9 +243,9 @@ def get_weather_info():
         return weather_info
     return {}
 
-def get_air_pollution():
-    LATITUDE = 38.736567139281746
-    LONGITUDE = -9.303651246619502
+def get_air_pollution(lat, long):
+    LATITUDE = lat
+    LONGITUDE = long
     pollution_url = f"https://api.openweathermap.org/data/2.5/air_pollution?lat={LATITUDE}&lon={LONGITUDE}&appid={OPEN_WEATHER_API}"
     response = requests.get(pollution_url)
     if response.status_code == 200:
@@ -284,9 +284,9 @@ def get_last_episode_info():
     else:
         return "📺 No recent episodes watched, via [TVTime](https://www.tvtime.com/user/4784821)."
 
-def update_readme():
+def update_readme(lat, long):
     posts = get_last_posts()
-    bio = get_current_bio()
+    bio = get_current_bio(lat, long)
     with open('README.md', 'w') as file:
         if bio:
             file.write(f"{bio}\n")
@@ -405,10 +405,14 @@ def get_location():
 
     last_issue = issues[-1]
     location_data = last_issue['body']
-    print(location_data)
+    lat_str, long_str = location_data.split(',')
+    latitude = float(lat_str.strip())
+    longitude = float(long_str.strip())
+    return latitude, longitude
 
-get_location()
-update_readme()
+
+lat, long = get_location()
+update_readme(lat, long)
 update_html()
 update_publications_json()
 
