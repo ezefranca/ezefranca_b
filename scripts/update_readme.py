@@ -339,7 +339,7 @@ def get_last_game_ns():
     json_data = json.loads(response.text)
     
     latest_game = None
-    latest_date = datetime.min
+    latest_date = datetime.datetime.min
 
     for record in json_data['items']:
         for app in record.get('playedApps', []):
