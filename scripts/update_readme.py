@@ -361,7 +361,7 @@ def get_last_game_ns():
 
     if last_played:
         print(last_played)
-        last_played_game = last_played['title']
+        last_played_game = last_played #['title']
         shop_uri = ''
         return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{last_played_game}]({shop_uri}) on {latest_time.strftime('%Y-%m-%d')}."
     else:
