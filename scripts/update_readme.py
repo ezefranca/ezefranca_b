@@ -337,7 +337,7 @@ def get_last_game_ns():
         return
 
     json_data = json.loads(response.text)
-    
+
     latest_game = None
     latest_date = datetime.datetime.min
 
@@ -349,17 +349,14 @@ def get_last_game_ns():
                     latest_game = app
                     latest_date = record_date
 
-    
-
-    latest_game_title = latest_game['title'] if latest_game else None
-    latest_game_shop_uri = latest_game['shopUri'] if latest_game else None
-    latest_game_date = latest_date.strftime('%d %b %Y') if latest_game else None
-    
     if latest_game:
-        play_date = latest_date.strftime('%d %b %Y')  
-        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{latest_game_title}]({latest_game_shop_uri}) on {play_date}."
+        game_name = latest_game['title']
+        play_date = latest_date.strftime('%d %b %Y')
+        shop_uri = latest_game['shopUri']
+        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date}."
     else:
         return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
+
 
 def get_last_presentation():
     url = "https://speakerdeck.com/ezefranca"
