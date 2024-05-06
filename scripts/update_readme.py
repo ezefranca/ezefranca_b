@@ -324,7 +324,7 @@ def parse_timestamp(ts):
         print(f"Error parsing timestamp: {e}")
         return None
 
-def get_last_game_ns(GITHUB_API_KEY):
+def get_last_game_ns():
     if not GITHUB_API_KEY:
         print("GitHub token not found in environment variables.")
         return
