@@ -356,24 +356,24 @@ def get_last_game_ns():
     last_played_game = None
     latest_time = None
 
-    # Iterate over each item to find the latest 'lastPlayedAt'
     for item in json_data['items']:
         last_played_at = item.get('lastPlayedAt')
         if last_played_at:
             last_played_at_datetime = datetime.datetime.fromtimestamp(last_played_at)
+            print(f"Checking item with date: {last_played_at_datetime}")  # Debug print
             if not latest_time or last_played_at_datetime > latest_time:
+                print(f"Updating latest game: {item['playedApps'][0]['title']}")  # Debug print
                 latest_time = last_played_at_datetime
                 last_played_game = item
-    last_game_info = ''
-    # Extract game details if the last played game was found
+
     if last_played_game and last_played_game['playedApps']:
         game = last_played_game['playedApps'][0]
         game_name = game['title']
         shop_uri = game['shopUri']
         play_date = latest_time.strftime('%Y-%m-%d')
-        last_game_info = f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date}."
+        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date}."
     else:
-        last_game_info = "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
+        return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
 
     return last_game_info
 
