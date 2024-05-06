@@ -310,6 +310,13 @@ def update_publications_json():
     with open('publications.json', 'w', encoding='utf-8') as f:
         json.dump(publications, f, ensure_ascii=False, indent=4)
 
+ def parse_timestamp(ts):
+    try:
+        return datetime.datetime.fromtimestamp(ts)
+    except Exception as e:
+        print(f"Error parsing timestamp: {e}")
+        return None
+
 def get_last_game_ns():
     if not GITHUB_API_KEY:
         print("GitHub token not found in environment variables.")
@@ -338,24 +345,45 @@ def get_last_game_ns():
 
     json_data = json.loads(response.text)
 
-    last_played_game = None
-    last_played_date = datetime.datetime.min
+    last_played = None
+    latest_time = None
     shop_uri = None
-
+    
     for item in json_data['items']:
-        if 'playedApps' in item:
-            for game in item['playedApps']:
-                if 'firstPlayDate' in game:
-                    first_play_date = datetime.datetime.fromisoformat(game['firstPlayDate'])
-                    if first_play_date > last_played_date:
-                        last_played_game = game['title']
-                        last_played_date = first_play_date
-                        shop_uri = game.get('shopUri', 'https://nin.codes/ezefranca')
+        last_played_at = item.get('lastPlayedAt')
+        if last_played_at:
+            # Convert the timestamp to datetime for comparison
+            last_played_at_datetime = parse_timestamp(last_played_at)
+            if last_played_at_datetime and (not latest_time or last_played_at_datetime > latest_time):
+                latest_time = last_played_at_datetime
+                last_played = item
 
-    if last_played_game:
-        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{last_played_game}]({shop_uri}) on {last_played_date.strftime('%Y-%m-%d')}."
+    if last_played:
+        print(last_played)
+        last_played_game = last_played['title']
+        shop_uri = ''
+        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{last_played_game}]({shop_uri}) on {latest_time.strftime('%Y-%m-%d')}."
     else:
         return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
+    
+    # last_played_game = None
+    # last_played_date = datetime.datetime.min
+    # shop_uri = None
+
+    # for item in json_data['items']:
+    #     if 'playedApps' in item:
+    #         for game in item['playedApps']:
+    #             if 'firstPlayDate' in game:
+    #                 first_play_date = datetime.datetime.fromisoformat(game['firstPlayDate'])
+    #                 if first_play_date > last_played_date:
+    #                     last_played_game = game['title']
+    #                     last_played_date = first_play_date
+    #                     shop_uri = game.get('shopUri', 'https://nin.codes/ezefranca')
+
+    # if last_played_game:
+    #     return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{last_played_game}]({shop_uri}) on {last_played_date.strftime('%Y-%m-%d')}."
+    # else:
+    #     return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
 
 
 def get_last_presentation():
