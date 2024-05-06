@@ -316,7 +316,7 @@ def parse_date(date_str):
     except ValueError as e:
         print(f"Error parsing date: {e}")
         return None
-         
+
 def parse_timestamp(ts):
     try:
         return datetime.datetime.fromtimestamp(ts)
@@ -324,7 +324,7 @@ def parse_timestamp(ts):
         print(f"Error parsing timestamp: {e}")
         return None
 
-def get_last_game_ns():
+def get_last_game_ns(GITHUB_API_KEY):
     if not GITHUB_API_KEY:
         print("GitHub token not found in environment variables.")
         return
@@ -351,6 +351,10 @@ def get_last_game_ns():
         return
 
     json_data = json.loads(response.text)
+
+    # Initialize variables
+    latest_date = None
+    games_on_latest_date = []
 
     for item in json_data['items']:
         item_date = parse_date(item['date'])
@@ -383,6 +387,7 @@ def get_last_game_ns():
         return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {latest_time.strftime('%Y-%m-%d')}."
     else:
         return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
+
 
     
     # last_played_game = None
