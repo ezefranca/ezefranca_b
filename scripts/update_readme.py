@@ -336,8 +336,8 @@ def get_last_game_ns():
         print(f"Failed to fetch text file. Status code: {response.status_code}")
         return
 
-    text_file_data = json.loads(json.dumps(response))
-    latest_game = None
+    text_file_data = json.loads(response.text)
+    latest_game = ''
     latest_date = datetime.datetime.min
 
     # Check all records to find the most recent game played
