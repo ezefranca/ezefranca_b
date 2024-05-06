@@ -355,7 +355,7 @@ def get_last_game_ns():
         if last_played_at:
             # Convert the timestamp to datetime for comparison
             last_played_at_datetime = parse_timestamp(last_played_at)
-            if last_played_at_datetime and (not latest_time or last_played_at_datetime > latest_time):
+            if last_played_at_datetime and (not latest_time or last_played_at_datetime < latest_time):
                 latest_time = last_played_at_datetime
                 last_played = item
 
