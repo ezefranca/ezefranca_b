@@ -1,7 +1,7 @@
 - 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 07 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
-- ⛅ The weather here is few clouds, 19°C (67°F) and humidity 62%.
-- 🔬 Air Quality here, **AQI Level**: 2
+- ⛅ The weather here is few clouds, 21°C (70°F) and humidity 54%.
+- 🔬 Air Quality here, **AQI Level**: 3
 - 💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip).
 - 🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en).
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
