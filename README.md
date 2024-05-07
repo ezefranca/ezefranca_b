@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 07 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
-- ☀️ The weather here is clear sky, 19°C (66°F) and humidity 56%.
+- ⛅ The weather here is few clouds, 19°C (65°F) and humidity 55%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip).
 - 🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en).
