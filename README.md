@@ -1,7 +1,7 @@
 - 👋 **Hello!** Wishing you a wonderful *Thursday* on this 09 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
-- ☀️ The weather here is clear sky, 19°C (66°F) and humidity 54%.
-- 🔬 Air Quality here, **AQI Level**: 1
+- ☀️ The weather here is clear sky, 20°C (68°F) and humidity 55%.
+- 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip).
 - 🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en).
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
@@ -9,7 +9,7 @@
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [Mario Kart 8 Deluxe](https://ec.nintendo.com/apps/0100152000022000/PT?lang=en-GB) on 2024-05-01.
 - 📺 Recently watched [This is Making Fun of Who Works](https://www.tvtime.com/show/377556) S9E31 "None" on 05 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
-- 🎧 Latest music: Metal Is the Law by [Massacration - Gates of Metal Fried Chicken of Death](https://www.last.fm/music/Massacration/_/Metal+Is+the+Law) via [LastFM](https://www.last.fm/user/ezefranca)
+- 🎧 Latest music: Mar De Gente by [O Rappa - O Silêncio Que Precede O Esporro](https://www.last.fm/music/O+Rappa/_/Mar+De+Gente) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
 
