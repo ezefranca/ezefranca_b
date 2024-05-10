@@ -53,13 +53,63 @@ def get_current_bio(lat, long):
     return bio_content
 
 def get_intro_info():
-    return "🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist."
+    headers = {'Authorization': f'token {GITHUB_API_KEY}'}
+    github_user_endpoint = "https://api.github.com/users/ezefranca"  # Adjust username as needed
+
+    response = requests.get(github_user_endpoint, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        name = data.get('name')
+        bio = data.get('bio')
+        if not name or not bio:
+            return "🚫 GitHub profile information is incomplete."
+        return f"🙋🏻‍♂️ I'm **{name}**, {bio}"
+    else:
+        return "🚫 Failed to fetch data from GitHub."
 
 def get_work_info():
-    return "💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip)."
+    headers = {'Authorization': f'token {GITHUB_API_KEY}'}
+    github_user_endpoint = "https://api.github.com/users/ezefranca"  # GitHub user's endpoint
+
+    response = requests.get(github_user_endpoint, headers=headers)
+    if response.status_code == 200:
+        data = response.json()
+        company = data.get('company')
+        if not company:
+            return "🚫 No current company information available on GitHub."
+        company_handle = company.lstrip('@')
+        org_url = f"https://api.github.com/orgs/{company_handle}"
+        org_response = requests.get(org_url, headers=headers)
+        if org_response.status_code == 200:
+            org_data = org_response.json()
+            name = org_data.get('name', company_handle)
+            description = org_data.get('description', "No description available.")
+            blog_url = org_data.get('blog', 'No website provided.')
+
+            return f"💼 Role: **Mobile Developer** at [{name}]({blog_url}) - {description}"
+        else:
+            return "🚫 Failed to fetch organization details from GitHub."
+    else:
+        return "🚫 Failed to fetch data from GitHub."
 
 def get_education_info():
-    return "🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en)."
+    orcid_id = '0000-0001-9321-8444'
+    url = f'https://orcid.org/{orcid_id}/affiliationGroups.json'
+    
+    response = requests.get(url)
+    data = response.json()
+
+    if len(data['affiliationGroups']['EDUCATION']) >= 1:
+        affiliations = data['affiliationGroups']['EDUCATION']
+        affiliation = affiliations[-1]['affiliations'][0] 
+        affiliation_roleTitle = affiliation['roleTitle']['value']
+        affiliation_departmentName = affiliation['departmentName']['value']
+        affiliation_url = affiliation['url']['value']
+        affiliation_region = affiliation['region']['value']
+        output = f"🎓I'm pursuing a {affiliation_roleTitle} at [{affiliation_departmentName}]({affiliation_url}) in {affiliation_region}."
+        return output
+    else:
+        return f"🎓 ..."
 
 def get_day_info():
     current_date = datetime.datetime.now()
