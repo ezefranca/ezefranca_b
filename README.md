@@ -1,9 +1,9 @@
 - 👋 **Hello!** Wishing you a wonderful *Friday* on this 10 of May of 2024.
-- 🙋🏻‍♂️ I'm **Ezequiel** (Ezekiel), a passionate developer and creative technologist.
-- ⛅ The weather here is few clouds, 24°C (76°F) and humidity 48%.
+- 🙋🏻‍♂️ I'm **Ezequiel Santos**, 📅 Friday, 10/05/2024
+- ⛅ The weather here is few clouds, 23°C (73°F) and humidity 52%.
 - 🔬 Air Quality here, **AQI Level**: 3
-- 💼 Role: **Mobile Developer** at [Miniclip](https://github.com/miniclip).
-- 🎓 Pursuing a **PhD** in *Digital Games Development* at [IADE](https://www.iade.pt/en).
+- 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
+- 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
 - 📚 Reading: **No bullshit guide to math and physics** by *Savov, Ivan* via [GoodReads](https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos)
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
