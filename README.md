@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Sunday* on this 12 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ⛅ The weather here is few clouds, 15°C (60°F) and humidity 78%.
+- ⛅ The weather here is few clouds, 16°C (61°F) and humidity 75%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
@@ -8,7 +8,7 @@
 - 📚 Reading: **No bullshit guide to math and physics** by *Savov, Ivan* via [GoodReads](https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos)
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [Mario Kart 8 Deluxe](https://ec.nintendo.com/apps/0100152000022000/PT?lang=en-GB) on 2024-05-01.
-- 📺 Recently watched [Dark Matter (2024)](https://www.tvtime.com/show/393159) S1E1 "Are You Happy in Your Life?" on 11 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
+- 📺 Recently watched [Dark Matter (2024)](https://www.tvtime.com/show/393159) S1E2 "Trip of a Lifetime" on 12 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
 - 🎧 Latest music: Mar De Gente by [O Rappa - O Silêncio Que Precede O Esporro](https://www.last.fm/music/O+Rappa/_/Mar+De+Gente) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
