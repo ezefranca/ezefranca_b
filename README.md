@@ -1,7 +1,7 @@
 - 👋 **Hello!** Wishing you a wonderful *Sunday* on this 12 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ⛅ The weather here is few clouds, 19°C (66°F) and humidity 66%.
-- 🔬 Air Quality here, **AQI Level**: 3
+- ⛅ The weather here is few clouds, 18°C (64°F) and humidity 69%.
+- 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
