@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Monday* on this 13 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ☁️ The weather here is broken clouds, 19°C (66°F) and humidity 74%.
+- 💧 The weather here is light intensity drizzle, 18°C (64°F) and humidity 82%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
