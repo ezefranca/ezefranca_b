@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Monday* on this 13 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ☁️ The weather here is broken clouds, 18°C (65°F) and humidity 80%.
+- 💧 The weather here is light intensity drizzle, 16°C (62°F) and humidity 80%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
@@ -9,7 +9,7 @@
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [Mario Kart 8 Deluxe](https://ec.nintendo.com/apps/0100152000022000/PT?lang=en-GB) on 2024-05-01.
 - 📺 Recently watched [Dark Matter (2024)](https://www.tvtime.com/show/393159) S1E2 "Trip of a Lifetime" on 12 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
-- 🎧 Latest music: Mar De Gente by [O Rappa - O Silêncio Que Precede O Esporro](https://www.last.fm/music/O+Rappa/_/Mar+De+Gente) via [LastFM](https://www.last.fm/user/ezefranca)
+- 🎧 Latest music: Amei Te Ver by [Tiago Iorc - Troco Likes](https://www.last.fm/music/Tiago+Iorc/_/Amei+Te+Ver) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
 
