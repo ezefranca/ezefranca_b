@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 14 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ☁️ The weather here is scattered clouds, 17°C (63°F) and humidity 59%.
+- ☁️ The weather here is scattered clouds, 17°C (62°F) and humidity 59%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
@@ -9,7 +9,7 @@
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [Mario Kart 8 Deluxe](https://ec.nintendo.com/apps/0100152000022000/PT?lang=en-GB) on 2024-05-01.
 - 📺 Recently watched [This is Making Fun of Who Works](https://www.tvtime.com/show/377556) S9E32 "None" on 13 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
-- 🎧 Latest music: More Than Friends by [Cain's Offering - Gather The Faithful](https://www.last.fm/music/Cain%27s+Offering/_/More+Than+Friends) via [LastFM](https://www.last.fm/user/ezefranca)
+- 🎧 Latest music: Semana Que Vem by [Pitty - Admirável Chip Novo](https://www.last.fm/music/Pitty/_/Semana+Que+Vem) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
 
