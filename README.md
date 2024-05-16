@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Thursday* on this 16 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ☁️ The weather here is broken clouds, 17°C (63°F) and humidity 68%.
+- ☁️ The weather here is broken clouds, 17°C (63°F) and humidity 73%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
@@ -9,7 +9,7 @@
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [Mario Kart 8 Deluxe](https://ec.nintendo.com/apps/0100152000022000/PT?lang=en-GB) on 2024-05-01.
 - 📺 Recently watched [Dark Matter (2024)](https://www.tvtime.com/show/393159) S1E3 "The Box" on 15 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
-- 🎧 Latest music: Semana Que Vem by [Pitty - Admirável Chip Novo](https://www.last.fm/music/Pitty/_/Semana+Que+Vem) via [LastFM](https://www.last.fm/user/ezefranca)
+- 🎧 Latest music: O Astronauta de Mármore (Starman) by [Nenhum de Nós - Cardume](https://www.last.fm/music/Nenhum+de+N%C3%B3s/_/O+Astronauta+de+M%C3%A1rmore+(Starman)) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
 
