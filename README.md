@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Thursday* on this 16 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- 💧 The weather here is light intensity drizzle, 17°C (62°F) and humidity 82%.
+- 💧 The weather here is light intensity drizzle, 16°C (61°F) and humidity 83%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
@@ -9,7 +9,7 @@
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [Mario Kart 8 Deluxe](https://ec.nintendo.com/apps/0100152000022000/PT?lang=en-GB) on 2024-05-01.
 - 📺 Recently watched [Dark Matter (2024)](https://www.tvtime.com/show/393159) S1E3 "The Box" on 15 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
-- 🎧 Latest music: I Hate Everything About You by [Three Days Grace - Three Days Grace (Expanded Edition)](https://www.last.fm/music/Three+Days+Grace/_/I+Hate+Everything+About+You) via [LastFM](https://www.last.fm/user/ezefranca)
+- 🎧 Latest music: Eu Quero Ver o Oco by [Raimundos - Lavô Tá Novo](https://www.last.fm/music/Raimundos/_/Eu+Quero+Ver+o+Oco) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
 
