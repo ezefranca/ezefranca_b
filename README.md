@@ -1,6 +1,6 @@
-- 👋 **Hello!** Wishing you a wonderful *Friday* on this 17 of May of 2024.
+- 👋 **Hello!** Wishing you a wonderful *Saturday* on this 18 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ⛅ The weather here is few clouds, 14°C (57°F) and humidity 83%.
+- ⛅ The weather here is few clouds, 13°C (56°F) and humidity 80%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
@@ -8,7 +8,7 @@
 - 📚 Reading: **No bullshit guide to math and physics** by *Savov, Ivan* via [GoodReads](https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos)
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [Mario Kart 8 Deluxe](https://ec.nintendo.com/apps/0100152000022000/PT?lang=en-GB) on 2024-05-01.
-- 📺 Recently watched [Young Sheldon](https://www.tvtime.com/show/328724) S7E10 "Community Service and the Key to a Happy Marriage" on 17 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
+- 📺 Recently watched [Sugar (2024)](https://www.tvtime.com/show/421070) S1E8 "Farewell" on 18 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
 - 🎧 Latest music: Minha Alma ( A Paz Que Eu Não Quero ) by [O Rappa - Lado B Lado A](https://www.last.fm/music/O+Rappa/_/Minha+Alma+(+A+Paz+Que+Eu+N%C3%A3o+Quero+)) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
