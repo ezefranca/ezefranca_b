@@ -357,7 +357,6 @@ def update_readme(lat, long):
     bio = get_current_bio(lat, long)
     with open('README.md', 'w') as file:
         if bio:
-            if bio.
             file.write(f"{bio}\n")
         # Writing the blog posts section
         file.write("> [!NOTE]\n")
