@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Monday* on this 20 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ☁️ The weather here is scattered clouds, 18°C (64°F) and humidity 65%.
+- ☁️ The weather here is scattered clouds, 18°C (65°F) and humidity 60%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 🎓I'm pursuing a PhD in Digital Games Development at [IADE - Faculty of Design, Technology and Communication](https://www.iade.europeia.pt/en/phd/phd-digital-games-development/) in Lisbon.
@@ -9,7 +9,7 @@
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://lounge.nintendo.com/friendcode/5071-0358-7137/DKDfpY5MsZ) was [Stardew Valley](https://ec.nintendo.com/apps/0100e65002bb8000/PT?lang=en-GB) on 19 of May of 2024.
 - 📺 Recently watched [Sugar (2024)](https://www.tvtime.com/show/421070) S1E8 "Farewell" on 18 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
-- 🎧 Latest music: Subirusdoistiozin by [Criolo - Nó Na Orelha](https://www.last.fm/music/Criolo/_/Subirusdoistiozin) via [LastFM](https://www.last.fm/user/ezefranca)
+- 🎧 Latest music: Glycerine (Remastered) by [Bush - Sixteen Stone (Remastered)](https://www.last.fm/music/Bush/_/Glycerine+(Remastered)) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
 
