@@ -395,7 +395,6 @@ def get_last_game_ns():
     last_issue = issues[0]
     text_file_link = last_issue['body']
     response = requests.get(text_file_link)
-    print(text_file_link)
     if response.status_code != 200:
         print(f"Failed to fetch text file. Status code: {response.status_code}")
         return
