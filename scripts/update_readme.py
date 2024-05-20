@@ -33,13 +33,31 @@ def get_current_bio(lat, long):
     linkedin_info = get_linkedin_info()
     presentation_info = get_last_presentation()
     
+    bio_content_dict = {
+        "day_info": day_info,
+        "intro_info": intro_info,
+        "weather_info": weather_info,
+        "air_quality_info": air_quality_info,
+        "working_info": working_info,
+        "education_info": education_info,
+        "presentation_info": presentation_info,
+        "last_book_info": last_book_info,
+        "last_game_info": last_game_info,
+        "last_games_ns_info": last_games_ns_info,
+        "last_episode_info": last_episode_info,
+        "last_song_info": last_song_info,
+        "linkedin_info": linkedin_info,
+    }
+
+    with open('bio.json', 'w') as file:
+        json.dump(bio_content_dict, file, indent=4)
+
     bio_content = (
         f"- {day_info}\n"
         f"- {intro_info}\n"
         f"- {weather_info}\n"
         f"- {air_quality_info}\n"
         f"- {working_info}\n"
-        f"- {education_info}\n"
         f"- {presentation_info}\n"
         f"- {last_book_info}\n"
         f"- {last_game_info}\n"
@@ -339,6 +357,7 @@ def update_readme(lat, long):
     bio = get_current_bio(lat, long)
     with open('README.md', 'w') as file:
         if bio:
+            if bio.
             file.write(f"{bio}\n")
         # Writing the blog posts section
         file.write("> [!NOTE]\n")
