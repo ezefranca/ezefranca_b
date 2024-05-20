@@ -392,7 +392,7 @@ def get_last_game_ns():
         print("No issues found.")
         return
 
-    last_issue = issues[-1]
+    last_issue = issues[0]
     text_file_link = last_issue['body']
     response = requests.get(text_file_link)
     print(text_file_link)
