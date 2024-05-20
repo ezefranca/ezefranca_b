@@ -1,4 +1,4 @@
-- 👋 **Hello!** Wishing you a wonderful *Sunday* on this 19 of May of 2024.
+- 👋 **Hello!** Wishing you a wonderful *Monday* on this 20 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
 - ⛅ The weather here is few clouds, 14°C (57°F) and humidity 82%.
 - 🔬 Air Quality here, **AQI Level**: 2
