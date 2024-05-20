@@ -402,30 +402,28 @@ def get_last_game_ns():
 
     json_data = json.loads(response.text)
 
-    # Re-analyzing the data with corrected datetime import
-    last_played_game = None
     latest_time = None
+    last_played_game = None
 
     for item in json_data['items']:
-        last_played_at = item.get('lastPlayedAt')
-        if last_played_at:
-            last_played_at_datetime = datetime.datetime.fromtimestamp(last_played_at)
-            print(f"Checking item with date: {last_played_at_datetime}")  # Debug print
-            if not latest_time or last_played_at_datetime > latest_time:
-                print(f"Updating latest game: {item['playedApps'][0]['title']}")  # Debug print
-                latest_time = last_played_at_datetime
-                last_played_game = item
+        if 'playedApps' in item:
+            for game in item['playedApps']:
+                last_played_at = item.get('lastPlayedAt')
+                if last_played_at:
+                    last_played_at_datetime = datetime.datetime.fromtimestamp(last_played_at)
+                    print(f"Checking game {game['title']} with date: {last_played_at_datetime}")  # Debug print
+                    if not latest_time or last_played_at_datetime > latest_time:
+                        print(f"Updating latest game: {game['title']}")  # Debug print
+                        latest_time = last_played_at_datetime
+                        last_played_game = game
 
-    if last_played_game and last_played_game['playedApps']:
-        game = last_played_game['playedApps'][0]
-        game_name = game['title']
-        shop_uri = game['shopUri']
-        play_date = latest_time.strftime('%Y-%m-%d')
-        return f"🕹️ Last played on [Nintendo Switch](https://nin.codes/ezefranca) was [{game_name}]({shop_uri}) on {play_date}."
+    if last_played_game:
+        game_name = last_played_game['title']
+        shop_uri = last_played_game['shopUri']
+        play_date = latest_time.strftime('%-d of %B of %Y')
+        return f"🕹️ Last played on [Nintendo Switch](https://lounge.nintendo.com/friendcode/5071-0358-7137/DKDfpY5MsZ) was [{game_name}]({shop_uri}) on {play_date}."
     else:
-        return "🕹️ No recent game played on [Nintendo Switch](https://nin.codes/ezefranca)."
-
-    return last_game_info
+        return "🕹️ No recent game played on [Nintendo Switch](https://lounge.nintendo.com/friendcode/5071-0358-7137/DKDfpY5MsZ)."
 
 
 def get_last_presentation():
