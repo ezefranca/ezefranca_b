@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Thursday* on this 23 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ⛅ The weather here is few clouds, 21°C (70°F) and humidity 45%.
+- ☀️ The weather here is clear sky, 21°C (70°F) and humidity 49%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
@@ -8,7 +8,7 @@
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://lounge.nintendo.com/friendcode/5071-0358-7137/DKDfpY5MsZ) was [Stardew Valley](https://ec.nintendo.com/apps/0100e65002bb8000/PT?lang=en-GB) on 19 of May of 2024.
 - 📺 Recently watched [Sugar (2024)](https://www.tvtime.com/show/421070) S1E8 "Farewell" on 18 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
-- 🎧 Latest music: Zombie by [The Cranberries - Stars: The Best of The Cranberries 1992-2002](https://www.last.fm/music/The+Cranberries/_/Zombie) via [LastFM](https://www.last.fm/user/ezefranca)
+- 🎧 Latest music: Colours Of My World (Chapter III) by [Vision Divine - Stream of Consciousness](https://www.last.fm/music/Vision+Divine/_/Colours+Of+My+World+(Chapter+III)) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
 
