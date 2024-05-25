@@ -1,4 +1,4 @@
-- 👋 **Hello!** Wishing you a wonderful *Friday* on this 24 of May of 2024.
+- 👋 **Hello!** Wishing you a wonderful *Saturday* on this 25 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
 - ⛅ The weather here is few clouds, 14°C (57°F) and humidity 79%.
 - 🔬 Air Quality here, **AQI Level**: 2
