@@ -1,13 +1,13 @@
-- 👋 **Hello!** Wishing you a wonderful *Sunday* on this 26 of May of 2024.
+- 👋 **Hello!** Wishing you a wonderful *Monday* on this 27 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ☁️ The weather here is broken clouds, 15°C (58°F) and humidity 74%.
+- ⛅ The weather here is few clouds, 14°C (57°F) and humidity 76%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
 - 📚 Reading: **No bullshit guide to math and physics** by *Savov, Ivan* via [GoodReads](https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos)
 - 🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since 08 Dec 2023 :(
 - 🕹️ Last played on [Nintendo Switch](https://lounge.nintendo.com/friendcode/5071-0358-7137/DKDfpY5MsZ) was [Stardew Valley](https://ec.nintendo.com/apps/0100e65002bb8000/PT?lang=en-GB) on 19 of May of 2024.
-- 📺 Recently watched [Dark Matter (2024)](https://www.tvtime.com/show/393159) S1E4 "The Corridor" on 26 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
+- 📺 Recently watched [The Big Door Prize](https://www.tvtime.com/show/403752) S2E7 "Rehearsals" on 26 May 2024 via [TVTime](https://www.tvtime.com/user/4784821).
 - 🎧 Latest music: Zombie by [The Cranberries - Stars: The Best of The Cranberries 1992-2002](https://www.last.fm/music/The+Cranberries/_/Zombie) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
