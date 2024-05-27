@@ -5,7 +5,7 @@ import os
 import markdown
 import json
 from bs4 import BeautifulSoup
-from steam_web_api import Steam
+#from steam_web_api import Steam
 from tvtimewrapper import TVTimeWrapper
 from scholarly_publications.fetcher import fetch_all_publications
 
@@ -27,7 +27,7 @@ def get_current_bio(lat, long):
     day_info = get_day_info()
     weather_info = get_weather_info(lat, long)
     air_quality_info = get_air_pollution(lat, long)
-    last_game_info = get_last_game_played_info()
+    #last_game_info = get_last_game_played_info()
     last_games_ns_info = get_last_game_ns()
     last_episode_info = get_last_episode_info()
     linkedin_info = get_linkedin_info()
@@ -139,24 +139,24 @@ def get_linkedin_info():
     linkedin_info = "⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca)."
     return linkedin_info
     
-def get_last_game_played_info():
-    STEAM_ID = 76561198048997048
-    steam = Steam(STEAM_API_KEY)
-    if not STEAM_API_KEY:
-        raise ValueError("STEAM_API_KEY is not set in environment variables")
+# def get_last_game_played_info():
+#     STEAM_ID = 76561198048997048
+#     steam = Steam(STEAM_API_KEY)
+#     if not STEAM_API_KEY:
+#         raise ValueError("STEAM_API_KEY is not set in environment variables")
 
-    recent_games = steam.users.get_user_recently_played_games(STEAM_ID)
-    if recent_games and recent_games.get('games'):
-        last_game = recent_games['games'][0]
-        game_name = last_game['name']
-        last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
-        return f"🎮 Last played on [Steam](https://steamcommunity.com/id/ezequielapp) was {game_name} on {last_played.strftime('%d %b %Y')}."
-    else:
-        from time import strftime, localtime
-        userDetails = steam.users.get_user_details(STEAM_ID)
-        timestamp = userDetails['player']['lastlogoff']
-        last_logoff = datetime.datetime.fromtimestamp(timestamp)
-        return f"🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since {last_logoff.strftime('%d %b %Y')} :("
+#     recent_games = steam.users.get_user_recently_played_games(STEAM_ID)
+#     if recent_games and recent_games.get('games'):
+#         last_game = recent_games['games'][0]
+#         game_name = last_game['name']
+#         last_played = datetime.datetime.fromtimestamp(last_game['last_play_time'])
+#         return f"🎮 Last played on [Steam](https://steamcommunity.com/id/ezequielapp) was {game_name} on {last_played.strftime('%d %b %Y')}."
+#     else:
+#         from time import strftime, localtime
+#         userDetails = steam.users.get_user_details(STEAM_ID)
+#         timestamp = userDetails['player']['lastlogoff']
+#         last_logoff = datetime.datetime.fromtimestamp(timestamp)
+#         return f"🎮 No recent games played on [Steam](https://steamcommunity.com/id/ezequielapp) since {last_logoff.strftime('%d %b %Y')} :("
 
 def get_last_posts(limit=3):
     rss_url = "http://ezefranca.com/feed.rss"
