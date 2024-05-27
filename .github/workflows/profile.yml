@@ -22,7 +22,8 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install feedparser python-dateutil requests beautifulsoup4 cachetools python-steam-api tvtimewrapper markdown scholarly_publications
+          pip install python-steam-api 
+          pip install feedparser python-dateutil requests beautifulsoup4 cachetools tvtimewrapper markdown scholarly_publications
           
       - name: Update README
         env:
