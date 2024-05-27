@@ -42,7 +42,7 @@ def get_current_bio(lat, long):
         "education_info": education_info,
         "presentation_info": presentation_info,
         "last_book_info": last_book_info,
-        "last_game_info": last_game_info,
+        # "last_game_info": last_game_info,
         "last_games_ns_info": last_games_ns_info,
         "last_episode_info": last_episode_info,
         "last_song_info": last_song_info,
@@ -60,7 +60,7 @@ def get_current_bio(lat, long):
         f"- {working_info}\n"
         f"- {presentation_info}\n"
         f"- {last_book_info}\n"
-        f"- {last_game_info}\n"
+        # f"- {last_game_info}\n"
         f"- {last_games_ns_info}\n"
         f"- {last_episode_info}\n"
         f"- {last_song_info}\n"
