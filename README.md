@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 28 of May of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ⛅ The weather here is few clouds, 23°C (73°F) and humidity 54%.
+- ⛅ The weather here is few clouds, 22°C (71°F) and humidity 56%.
 - 🔬 Air Quality here, **AQI Level**: 3
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
