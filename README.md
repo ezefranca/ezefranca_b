@@ -1,4 +1,4 @@
-- 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 04 of June of 2024.
+- 👋 **Hello!** Wishing you a wonderful *Wednesday* on this 05 of June of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
 - ☀️ The weather here is clear sky, 18°C (64°F) and humidity 75%.
 - 🔬 Air Quality here, **AQI Level**: 2
