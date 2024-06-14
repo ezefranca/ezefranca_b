@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Friday* on this 14 of June of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ☁️ The weather here is scattered clouds, 17°C (62°F) and humidity 87%.
+- 🌫️ The weather here is mist, 18°C (64°F) and humidity 86%.
 - 🔬 Air Quality here, **AQI Level**: 1
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
