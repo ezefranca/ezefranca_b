@@ -1,12 +1,12 @@
 - 👋 **Hello!** Wishing you a wonderful *Sunday* on this 23 of June of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ⛅ The weather here is few clouds, 24°C (76°F) and humidity 55%.
+- ⛅ The weather here is few clouds, 21°C (70°F) and humidity 66%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
 - 📚 Reading: **No bullshit guide to math and physics** by *Savov, Ivan* via [GoodReads](https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos)
 - 🕹️ Last played on [Nintendo Switch](https://lounge.nintendo.com/friendcode/5071-0358-7137/DKDfpY5MsZ) was [Stardew Valley](https://ec.nintendo.com/apps/0100e65002bb8000/PT?lang=en-GB) on 3 of June of 2024.
-- 📺 Recently watched [Dark Matter (2024)](https://www.tvtime.com/show/393159) S1E6 "Superposition" on 09 Jun 2024 via [TVTime](https://www.tvtime.com/user/4784821).
+- 📺 Recently watched [The Big Door Prize](https://www.tvtime.com/show/403752) S2E10 "Deercoming" on 23 Jun 2024 via [TVTime](https://www.tvtime.com/user/4784821).
 - 🎧 Latest music: Smooth Criminal by [Alien Ant Farm - Anthology](https://www.last.fm/music/Alien+Ant+Farm/_/Smooth+Criminal) via [LastFM](https://www.last.fm/user/ezefranca)
 - ⚡ Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/ezefranca).
 
