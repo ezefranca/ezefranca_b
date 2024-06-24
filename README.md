@@ -1,6 +1,6 @@
 - 👋 **Hello!** Wishing you a wonderful *Monday* on this 24 of June of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ⛅ The weather here is few clouds, 24°C (75°F) and humidity 65%.
+- ⛅ The weather here is few clouds, 22°C (72°F) and humidity 69%.
 - 🔬 Air Quality here, **AQI Level**: 3
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
@@ -14,7 +14,7 @@
 
 > [!NOTE]
 > Last personal updates:
+>  - [🇲🇹 6th International Summer School on AI and Games @ University of Malta](https://ezefranca.com/news/international-summer-school-on-ai-and-games)
 >  - [🍎 Apple Developer Academy students and alumni AI curriculum 🤖](https://ezefranca.com/news/apple-developer-academy-introduces-ai-training-for-all-students-and-alumni)
 >  - [🇩🇰 Sustainable and Digital Transformation Course @ Aalborg University (AAU)](https://ezefranca.com/news/sustainable-and-digital-transformation-aalborg-university)
->  - [🎙️ Interview / Coffee n' Jam 2024 @ Instituto Superior Técnico (IST)](https://ezefranca.com/news/coffee-n-jam-2024-ist)
 
