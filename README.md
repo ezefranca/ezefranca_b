@@ -1,10 +1,10 @@
 - 👋 **Hello!** Wishing you a wonderful *Tuesday* on this 25 of June of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ☁️ The weather here is scattered clouds, 21°C (70°F) and humidity 67%.
+- ⛅ The weather here is few clouds, 21°C (69°F) and humidity 63%.
 - 🔬 Air Quality here, **AQI Level**: 2
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
-- 📚 Currently reading nothing :(
+- 📚 Reading: **No bullshit guide to math and physics** by *Savov, Ivan* via [GoodReads](https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos)
 - 🕹️ Last played on [Nintendo Switch](https://lounge.nintendo.com/friendcode/5071-0358-7137/DKDfpY5MsZ) was [Stardew Valley](https://ec.nintendo.com/apps/0100e65002bb8000/PT?lang=en-GB) on 3 of June of 2024.
 - 📺 Recently watched [The Big Door Prize](https://www.tvtime.com/show/403752) S2E10 "Deercoming" on 23 Jun 2024 via [TVTime](https://www.tvtime.com/user/4784821).
 - 🎧 Latest music: Girassol (acústico) by [Cidade Negra - Acústico Cidade Negra](https://www.last.fm/music/Cidade+Negra/_/Girassol+(ac%C3%BAstico)) via [LastFM](https://www.last.fm/user/ezefranca)
