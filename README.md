@@ -1,7 +1,7 @@
 - 👋 **Hello!** Wishing you a wonderful *Sunday* on this 30 of June of 2024.
 - 🙋🏻‍♂️ I'm **Ezequiel Santos**, passionate developer and creative technologist
-- ⛅ The weather here is few clouds, 17°C (62°F) and humidity 84%.
-- 🔬 Air Quality here, **AQI Level**: 2
+- ⛅ The weather here is few clouds, 17°C (62°F) and humidity 86%.
+- 🔬 Air Quality here, **AQI Level**: 1
 - 💼 Role: **Mobile Developer** at [Miniclip](https://www.miniclip.com) - Play Games!
 - 💻 Last uploaded deck was [Dependency Management in iOS Development: A Developer Survey Perspective](https://speakerdeck.com/ezefranca/dependency-management-in-ios-development-a-developer-survey-perspective)
 - 📚 Reading: **No bullshit guide to math and physics** by *Savov, Ivan* via [GoodReads](https://www.goodreads.com/review/list/21512585-ezequiel-fran-a-dos-santos)
